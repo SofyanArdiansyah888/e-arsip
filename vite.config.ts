@@ -8,17 +8,6 @@ export default defineConfig({
     commonjsOptions: {
       include: ["tailwind.config.js", "node_modules/**"],
     },
-  //  outDir:'D:/Projects/nobel/hris/public'
-  rollupOptions: {
-    output: {
-      dir: 'D:/Projects/nobel/hris/public/assets',
-      entryFileNames: '[name].js',
-      assetFileNames: 'assets/[name].[ext]',
-      chunkFileNames: "chunk-[name].js",
-      manualChunks: undefined,
-      
-    }
-  }
   },
   optimizeDeps: {
     include: ["tailwind-config"],
