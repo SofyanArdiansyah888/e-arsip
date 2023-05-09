@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { twMerge } from "tailwind-merge";
 import { Tab as HeadlessTab, Transition } from "@headlessui/react";
 import { Fragment, createContext, useContext } from "react";
