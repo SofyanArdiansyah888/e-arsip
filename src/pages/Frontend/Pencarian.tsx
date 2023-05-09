@@ -11,19 +11,19 @@ export default function Pencarian() {
   const menus = [
     {
       name: "Beranda",
-      link: "/beranda",
+      link: "/",
     },
     {
       name: "Tentang Kami",
-      link: "/beranda",
+      link: "/",
     },
     {
       name: "Berita",
-      link: "/beranda",
+      link: "/",
     },
     {
       name: "Kontak",
-      link: "/beranda",
+      link: "/",
     },
   ];
   return (
