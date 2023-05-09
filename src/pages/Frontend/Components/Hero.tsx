@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="beranda"
-      className="w-full h-[85vh] mt-[70px] bg-cover bg-center bg-no-repeat bg-[url('slider.jpeg')] bg-gray-400 bg-blend-multiply"
+      className="w-full h-[85vh] mt-[70px] bg-cover bg-center bg-no-repeat bg-[url('https://file.sulselprov.go.id/upload/header/62993cd128426.png')] bg-gray-400 bg-blend-multiply"
     >
       <div className="px-4 mx-auto  text-center lg:py-56 items-center ">
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">

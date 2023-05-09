@@ -14,10 +14,29 @@ export default function Beranda() {
     body.style.padding = "0";
     body.style.background = "white";
   }, []);
+  const menus = [
+    {
+      name: "Beranda",
+      link: "#beranda",
+    },
+    {
+      name: "Tentang Kami",
+      link: "#about",
+    },
+    {
+      name: "Berita",
+      link: "#berita",
+    },
+    {
+      name: "Kontak",
+      link: "#kontak",
+    },
+  ];
   return (
     <>
       <Layout>
         <>
+          <Navbar menus={menus} />
           <Hero />
           <About />
           <Berita />

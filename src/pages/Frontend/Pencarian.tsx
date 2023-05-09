@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Layout from "./Layouts";
+import Navbar from "./Components/Navbar";
 
 export default function Pencarian() {
   useEffect(() => {
@@ -7,8 +8,27 @@ export default function Pencarian() {
     body.style.padding = "0";
     body.style.background = "white";
   }, []);
+  const menus = [
+    {
+      name: "Beranda",
+      link: "/beranda",
+    },
+    {
+      name: "Tentang Kami",
+      link: "/beranda",
+    },
+    {
+      name: "Berita",
+      link: "/beranda",
+    },
+    {
+      name: "Kontak",
+      link: "/beranda",
+    },
+  ];
   return (
     <Layout>
+      <Navbar menus={menus} />
       <div className="mt-20 pt-12 px-8 min-h-screen space-y-8">
         <h1 className="font-semibold text-2xl">Silahkan Cari Surat Anda</h1>
         <div className="mb-6">

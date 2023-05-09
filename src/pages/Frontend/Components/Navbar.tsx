@@ -1,27 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
-
-export default function Navbar() {
+interface IMenu {
+  link: string;
+  name:string;
+}
+export default function Navbar({menus} : {menus: IMenu[]}) {
   const { hash } = useLocation();
-  const menus = [
-    {
-      name: "Beranda",
-      link: "/beranda#beranda",
-    },
-    {
-      name: "Tentang Kami",
-      link: "/beranda#about",
-    },
-    {
-      name: "Berita",
-      link: "/beranda#berita",
-    },
-    {
-      name: "Kontak",
-      link: "/beranda#kontak",
-    },
-    
-  ];
-
+  
   return (
     <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
