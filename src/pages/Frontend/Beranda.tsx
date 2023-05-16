@@ -1,11 +1,8 @@
-import Lucide from "@/base-components/Lucide";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import About from "./Components/About";
 import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
-import About from "./Components/About";
-import Berita from "./Components/Berita";
-import Footer from "./Components/Footer";
+import SambutanKadis from "./Components/SambutanKadis";
 import Layout from "./Layouts";
 
 export default function Beranda() {
@@ -20,17 +17,15 @@ export default function Beranda() {
       link: "#beranda",
     },
     {
+      name: "Sambutan",
+      link: "#sambutan",
+    },
+    {
       name: "Tentang Kami",
       link: "#about",
     },
-    {
-      name: "Berita",
-      link: "#berita",
-    },
-    {
-      name: "Kontak",
-      link: "#kontak",
-    },
+    
+    
   ];
   return (
     <>
@@ -38,8 +33,10 @@ export default function Beranda() {
         <>
           <Navbar menus={menus} />
           <Hero />
+          <SambutanKadis />
           <About />
-          <Berita />
+          
+          
         </>
       </Layout>
     </>

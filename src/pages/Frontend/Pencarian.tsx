@@ -1,8 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Layout from "./Layouts";
 import Navbar from "./Components/Navbar";
+import Lucide from "@/base-components/Lucide";
+import { Menu } from "@/base-components/Headless";
 
 export default function Pencarian() {
+  const [showFilter, setShowFilter] = useState(false);
+  const [cariFilter, setCariFilter] = useState<
+    "Nomor Surat" | "Asal Surat" | "Perihal"
+  >("Nomor Surat");
+
   useEffect(() => {
     const body = document.getElementsByTagName("body")[0];
     body.style.padding = "0";
@@ -42,34 +49,70 @@ export default function Pencarian() {
             <option>Surat Umum</option>
           </select>
         </div>
-        <div className="mb-6">
+        <div className="mb-6 relative">
           <input
             type="email"
             id="email"
             className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-            placeholder="Cari Nomor Surat..."
+            placeholder={cariFilter}
             required
           />
+          <Lucide
+            icon="Filter"
+            className="absolute top-3 right-3 w-5 h-5 cursor-pointer"
+            onClick={() => setShowFilter((filter) => !filter)}
+          />
+          {showFilter && (
+            <Menu className="absolute right-0 top-12 z-30 bg-white shadow-md px-4 rounded-lg py-4 ">
+              <Menu.Item
+                onClick={() => {
+                  setCariFilter("Nomor Surat");
+                  setShowFilter(false);
+                }}
+              >
+                Nomor Surat
+              </Menu.Item>
+              <Menu.Item
+                onClick={() => {
+                  setCariFilter("Asal Surat");
+                  setShowFilter(false);
+                }}
+              >
+                Asal Surat
+              </Menu.Item>
+              <Menu.Item
+                onClick={() => {
+                  setCariFilter("Perihal");
+                  setShowFilter(false);
+                }}
+              >
+                Perihal
+              </Menu.Item>
+            </Menu>
+          )}
         </div>
 
-        <div className="relative  overflow-x-auto shadow-md sm:rounded-lg z-30">
+        <div className="relative  overflow-x-auto shadow-md sm:rounded-lg">
           <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
                 <th scope="col" className="px-6 py-3">
-                  Product name
+                  No
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Color
+                  Tanggal Masuk
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Category
+                  Perihal
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Price
+                  Dari
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Action
+                  Ditujukan
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Posisi Surat
                 </th>
               </tr>
             </thead>
@@ -79,96 +122,16 @@ export default function Pencarian() {
                   scope="row"
                   className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  Apple MacBook Pro 17"
+                  1
                 </th>
-                <td className="px-6 py-4">Silver</td>
-                <td className="px-6 py-4">Laptop</td>
-                <td className="px-6 py-4">$2999</td>
-                <td className="px-6 py-4">
-                  <a
-                    href="#"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >
-                    Edit
-                  </a>
-                </td>
+                <td className="px-6 py-4">1  Januari 2023</td>
+                <td className="px-6 py-4">Surat Perintah Makan-makan</td>
+                <td className="px-6 py-4">Baco</td>
+                <td className="px-6 py-4">Besse</td>
+                <td className="px-6 py-4">Atap Genteng</td>
               </tr>
-              <tr className="border-b bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  Microsoft Surface Pro
-                </th>
-                <td className="px-6 py-4">White</td>
-                <td className="px-6 py-4">Laptop PC</td>
-                <td className="px-6 py-4">$1999</td>
-                <td className="px-6 py-4">
-                  <a
-                    href="#"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >
-                    Edit
-                  </a>
-                </td>
-              </tr>
-              <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  Magic Mouse 2
-                </th>
-                <td className="px-6 py-4">Black</td>
-                <td className="px-6 py-4">Accessories</td>
-                <td className="px-6 py-4">$99</td>
-                <td className="px-6 py-4">
-                  <a
-                    href="#"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >
-                    Edit
-                  </a>
-                </td>
-              </tr>
-              <tr className="border-b bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  Google Pixel Phone
-                </th>
-                <td className="px-6 py-4">Gray</td>
-                <td className="px-6 py-4">Phone</td>
-                <td className="px-6 py-4">$799</td>
-                <td className="px-6 py-4">
-                  <a
-                    href="#"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >
-                    Edit
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  Apple Watch 5
-                </th>
-                <td className="px-6 py-4">Red</td>
-                <td className="px-6 py-4">Wearables</td>
-                <td className="px-6 py-4">$999</td>
-                <td className="px-6 py-4">
-                  <a
-                    href="#"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >
-                    Edit
-                  </a>
-                </td>
-              </tr>
+          
+              
             </tbody>
           </table>
         </div>
