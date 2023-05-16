@@ -15,20 +15,16 @@ export default function Footer() {
           </a>
         </li>
         <li>
+          <a href="#sambutan" className="mr-4 hover:underline md:mr-6">
+            Sambutan
+          </a>
+        </li>
+        <li>
           <a href="#about" className="mr-4 hover:underline md:mr-6">
             Tentang Kami
           </a>
         </li>
-        <li>
-          <a href="#berita" className="mr-4 hover:underline md:mr-6">
-            Berita
-          </a>
-        </li>
-        <li>
-          <a href="#kontak" className="hover:underline">
-            Kontak
-          </a>
-        </li>
+       
       </ul>
     </footer>
   );
