@@ -1,4 +1,4 @@
-import sekdaUrl from '../../../../public/sekda.png'
+import sekdaUrl from '../../../assets/images/sekda.png'
 export default function SambutanKadis() {
   return (
     <section id="sambutan" className="py-24 text-center bg-zinc-50">

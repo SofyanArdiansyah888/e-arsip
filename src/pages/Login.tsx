@@ -1,14 +1,10 @@
-import illustrationUrl from "@/assets/images/illustration.svg";
 import logoUrl from "@/assets/images/logo.png";
 import Button from "@/base-components/Button";
 import { FormCheck, FormInput } from "@/base-components/Form";
 import { usePost } from "@/hooks/useApi";
-import { GetDetailPayload } from "@/models/GenericPayload";
 import { UserEntity } from "@/models/User.entity";
 import { useAuth } from "@/providers/AuthProvider";
-import { useAppDispatch } from "@/stores/hooks";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { AxiosError } from "axios";
 import clsx from "clsx";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -146,8 +142,8 @@ function LoginInfo() {
             src={logoUrl}
           />
           <div className="mt-10 text-4xl font-medium leading-tight text-white -intro-x">
-            A few more clicks to <br />
-            sign in to your account.
+            Selamat Datang, <br />
+            Di Dashboard
           </div>
         </div>
       </div>
