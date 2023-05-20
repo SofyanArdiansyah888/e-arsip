@@ -10,6 +10,10 @@ export default function Beranda() {
     const body = document.getElementsByTagName("body")[0];
     body.style.padding = "0";
     body.style.background = "white";
+    return () => {
+      body.style.background = "#0f172a"
+      body.style.padding = '16px'
+    }
   }, []);
   const menus = [
     {

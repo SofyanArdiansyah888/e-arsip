@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="beranda"
-      className={`w-full h-[85vh] mt-[70px] bg-cover bg-center bg-no-repeat  bg-gray-400 bg-blend-multiply`}
+      className={`w-full flex items-center h-[85vh] mt-[70px] bg-cover bg-center bg-no-repeat  bg-gray-500 bg-blend-multiply`}
       style={{
         backgroundImage:`url(${sliderUrl})`
       }}

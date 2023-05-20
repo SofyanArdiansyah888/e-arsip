@@ -30,7 +30,7 @@ function Login() {
   });
 
   const { mutate, isLoading } = usePost<FormData>({
-    endpoint: "login-admin",
+    endpoint: "login",
     name: "login",
     onSuccessCallback: (data: UserEntity) => {
         auth.login(data)

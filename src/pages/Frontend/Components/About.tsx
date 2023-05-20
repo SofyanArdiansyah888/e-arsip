@@ -4,28 +4,29 @@ export default function About() {
       <h2 className="text-4xl  font-semibold">Tentang Kami</h2>
       <div className="border-b-2 border-gray-700 w-64 mx-auto mt-4" />
 
-      <div className="flex flex-row mt-32 gap-12 px-24 items-center">
+      <div className="flex flex-col-reverse lg:flex-row mt-32 gap-12 px-8 lg:px-24 items-center">
         <div className="flex-1 text-left space-y-8 ">
           <h3 className="text-2xl font-semibold">
             E Arsip Pemprov Maluku Utara
           </h3>
           <p className="leading-7">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut
-            pharetra nisi. Proin vitae magna urna. Nunc ut tortor in orci porta
-            volutpat. Sed sodales gravida aliquam. Ut nec facilisis ligula, id
-            mattis enim. Nullam et nisl dapibus, elementum leo ut, hendrerit
-            enim. Maecenas eget nisl velit. Curabitur dictum, lectus et
-            dignissim ullamcorper, ipsum tortor faucibus lectus, quis mattis
-            sapien diam non risus. Integer dictum tincidunt pellentesque.
-            Integer accumsan magna purus. Proin posuere vitae est et lobortis.
-            Curabitur in dui id nulla fermentum semper a nec dolor. Aliquam
-            euismod tincidunt mi, sed finibus felis placerat id. Aliquam laoreet
-            sem sed suscipit malesuada. Quisque vitae lacus id erat euismod
-            mattis sed vel eros. Cras tincidunt eros ipsum, sit amet aliquam
-            nisl imperdiet a. Nulla nibh elit, feugiat ac rhoncus ac, tempus eu
-            ante. Suspendisse tincidunt eros in sem fermentum consectetur. Ut
-            magna leo, hendrerit eget porttitor vitae, venenatis ut ligula.
+           Sebagai salah satu Provinsi termuda dari 33 Provinsi di Indonesia. Maluku Utara resmi terbentuk pada tanggal 4 Oktober 1999, melalui UU RI Nomor 46 Tahun 1999 dan UU RI Nomor 2003. Sebelum resmi menjadi sebuah Provinsi, Maluku Utara merupakan bagian dari Provinsi Maluku, yaitu Kabupaten Maluku Utara.
           </p>
+          <p className="leading-7">
+           Pada awal pendiriannya, Provinsi Maluku Utara beribukota di Ternate yang berlokasi di kaki gunung Gamalama, selama 11 Tahun. Tepatnya sampai dengan 4 Agustus 2010, setelah 11 Tahun masa transisi dan persiapan infrastruktur, ibukota Provinsi Maluku Utara dipindahkan ke kota sofifi yang terletak di Pulau Halmahera yang merupakan pulau terbesarnya.
+          </p>
+          {/* <p className="leading-7">
+          Geografis Maluku Utara yang terletak pada Koordinat 3º 40' LS- 3º 0' LU123º 50' - 129º 50' BT, sebenarnya merupakan gugusan kepulauan dengan rasio daratan dan perairan sebanyak 24 : 76. Memiliki gugusan pulau sebanyak 395 buah, 83% atau sekitar 331 pulaunya belum berpenghuni.
+          </p>
+          <p className="leading-7">
+            Provinsi Maluku Utara terkenal juga dengan sebutan Moloku Kie Raha atau Kesultanan Empat Gunung di Maluku, karena pada mulanya daerah ini merupakan wilayah 4 kerajaan besar Islam Timur Nusantara, terdiri dari: Kesultanan Bacan, Kesultanan Jailolo, Kesultanan Tidore, dan Kesultanan Ternate.
+          </p>
+          <p className="leading-7">
+            Terdapat beragam suku yang mendiami wilayah Maluku Utara, yaitu Suku Madole,Suku Pagu, Suku Ternate, Suku Makian Barat, Suku Kao, Suku Tidore, Suku Buli, Suku Patani, Suku Maba, Suku Sawai, Suku Weda, Suku Gane, Suku Makian Timur, Suku Kayoa, Suku Bacan, Suku Sula, Suku Ange, Suku Siboyo, Suku Kadai, Suku Galela, Suku Tobelo, Suku Loloda, Suku Tobaru, Suku Sahu, Suku Arab, dan Eropa.
+          </p>
+          <p className="leading-7">
+            Pergerakan perekonomian daerah di Maluku Utara sebagian besar bersumber dari perekonomian rakyat yang bertumpu pada sektor pertanian, perikanan dan jenis hasil laut lainnya. Komoditas utama yang mendukung nadi perekonomian di Maluku Utara meliputi Kopra, Buah Pala, Cengkeh Perikanan, yang sebagian telah diekspor ke Jepang, Emas dan Nikel yang sebagian telah diekspor ke Jepang
+          </p> */}
         </div>
         <div className="flex-1">
           <img

@@ -22,61 +22,7 @@ const initialState: SideMenuState = {
       pathname: PATHNAME.DASHBOARD,
       title: "Dashboard",
     },
-    {
-      icon: "Database",
-      subMenu: [
-        {
-          icon: "ChevronRight",
-          pathname: PATHNAME.MASTER_UNIT_KERJA,
-          title: "Unit Kerja",
-        },
-        {
-          icon: "ChevronRight",
-          pathname: PATHNAME.MASTER_JABATAN,
-          title: "Jabatan",
-        },
-        {
-          icon: "ChevronRight",
-          pathname: PATHNAME.MASTER_LEVEL,
-          title: "Level",
-        },
 
-        {
-          icon: "ChevronRight",
-          pathname: PATHNAME.MASTER_SHIFT,
-          title: "Shift",
-        },
-
-        {
-          icon: "ChevronRight",
-          pathname: PATHNAME.MASTER_HARI_LIBUR,
-          title: "Hari Libur",
-        },
-        {
-          icon: "ChevronRight",
-          pathname: PATHNAME.MASTER_IZIN,
-          title: "Cuti/Izin",
-        },
-      ],
-      title: "Master Data",
-    },
-    // KARYAWAN
-    {
-      icon: "Users",
-      title: "Karyawan",
-      subMenu: [
-        {
-          icon: "ChevronRight",
-          pathname: PATHNAME.KARYAWAN,
-          title: "List Karyawan",
-        },
-        {
-          icon: "ChevronRight",
-          pathname: PATHNAME.KARYAWAN_ABSEN,
-          title: "Absensi",
-        },
-      ],
-    },
 
     {
       icon: "Coins",

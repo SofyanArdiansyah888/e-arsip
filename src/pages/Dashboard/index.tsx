@@ -62,50 +62,14 @@ function Main() {
         <h2 className="mr-auto text-lg font-medium">Dashboard</h2>
       </div>
       {/* BEGIN: Page Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-3   ">
-        <div className="col-span-2 p-5 mt-5 intro-y box relative border-t-2 border-black  ">
+      <div className="grid grid-cols-1 lg:grid-cols-1  ">
+        <div className=" p-5 mt-5 intro-y box relative border-t-2 border-black  ">
           <div className="max-h-[calc(100vh-300px)]">
-            <VerticalBarChart
-              height={400}
-              datasets={[
-                {
-                  label: "Total Keterlambatan",
-                  backgroundColor: getColor('red.500'),
-                  barPercentage: 1,
-                  barThickness: 20,
-                  maxBarThickness: 30,
-                  minBarLength: 4,
-                  data: dataChart,
-                },
-              ]}
-              labels={labels}
-            />
+           Selamat Datang
           </div>
         </div>
-        <Pemberitahuan data={payload?.data ? payload.data : []} />
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3   ">
-        <Card
-          title="Izin"
-          subtitle={`${
-            izinCount > 0
-              ? `${izinCount} Pengajuan Berlangsung`
-              : `Tidak Ada Pengajuan`
-          }`}
-          route="/karyawan/riwayat-izin"
-          icon="ShieldAlert"
-        />
-        <Card
-          title="Cuti"
-          subtitle={`${
-            cutiCount > 0
-              ? `${cutiCount} Pengajuan Berlangsung`
-              : `Tidak Ada Pengajuan`
-          }`}
-          route="/karyawan/riwayat-cuti"
-          icon="Shield"
-        />
-      </div>
+    
 
       {/* END: Page Layout */}
     </>
