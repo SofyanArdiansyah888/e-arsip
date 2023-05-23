@@ -1,11 +1,11 @@
-import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
-import darkModeReducer from "./apps/darkModeSlice";
+import { Action, ThunkAction, configureStore } from "@reduxjs/toolkit";
 import colorSchemeReducer from "./apps/colorSchemeSlice";
+import darkModeReducer from "./apps/darkModeSlice";
+import notificationReducer from './apps/notificationSlice';
 import sideMenuReducer from "./apps/sideMenuSlice";
 import simpleMenuReducer from "./apps/simpleMenuSlice";
 import topMenuReducer from "./apps/topMenuSlice";
-import notificationReducer from './apps/notificationSlice'
-import selectedKaryawanReducer from './data/KarywanSlice';
+
 export const store = configureStore({
   reducer: {
     darkMode: darkModeReducer,
@@ -14,7 +14,6 @@ export const store = configureStore({
     simpleMenu: simpleMenuReducer,
     topMenu: topMenuReducer,
     notification: notificationReducer,
-    selectedKaryawan: selectedKaryawanReducer
   },
 });
 
