@@ -3,12 +3,18 @@ import Layout from "./Layouts";
 import Navbar from "./Components/Navbar";
 import Lucide from "@/base-components/Lucide";
 import { Menu } from "@/base-components/Headless";
+import { useGet } from "@/hooks/useApi";
+import { GetPayload } from "@/models/GenericPayload";
+import SuratEntity from "@/models/Surat.entity";
 
 export default function Pencarian() {
   const [showFilter, setShowFilter] = useState(false);
+  const [jenisSurat, setJenisSurat] = useState("surat umum");
   const [cariFilter, setCariFilter] = useState<
     "Nomor Surat" | "Asal Surat" | "Perihal"
   >("Nomor Surat");
+
+  const [search, setSearch] = useState('')
 
   useEffect(() => {
     const body = document.getElementsByTagName("body")[0];
@@ -33,6 +39,28 @@ export default function Pencarian() {
       link: "/",
     },
   ];
+
+  const {
+    data: payload,
+    refetch,
+    isLoading,
+  } = useGet<GetPayload<SuratEntity>>({
+    name: "surats",
+    endpoint: `surats`,
+    filter: {
+      limit: 100,
+      jenis_surat: jenisSurat,
+      search
+    },
+  });
+  useEffect(() => {
+    console.log(search)
+    setTimeout(() => {
+      refetch();
+    },300)
+    
+  }, [search]);
+
   return (
     <Layout>
       <Navbar menus={menus} />
@@ -40,22 +68,23 @@ export default function Pencarian() {
         <h1 className="font-semibold text-2xl">Silahkan Cari Surat Anda</h1>
         <div className="mb-6">
           <select
-            id="countries"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            value={jenisSurat}
+            onChange={(e) => setJenisSurat(e.target.value)}
           >
-            <option>Pilih Jenis Surat</option>
-            <option>Surat Mutasi</option>
-            <option>Bantuan Dana</option>
-            <option>Surat Umum</option>
+            <option value="surat mutasi">Surat Mutasi</option>
+            <option value="bantuan dana">Bantuan Dana</option>
+            <option value="surat umum">Surat Umum</option>
           </select>
         </div>
         <div className="mb-6 relative">
           <input
-            type="email"
-            id="email"
+            type="text"
             className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
             placeholder={cariFilter}
             required
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
           />
           <Lucide
             icon="Filter"
@@ -117,21 +146,16 @@ export default function Pencarian() {
               </tr>
             </thead>
             <tbody>
-              <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  1
-                </th>
-                <td className="px-6 py-4">1  Januari 2023</td>
-                <td className="px-6 py-4">Surat Perintah Makan-makan</td>
-                <td className="px-6 py-4">Baco</td>
-                <td className="px-6 py-4">Besse</td>
-                <td className="px-6 py-4">Atap Genteng</td>
-              </tr>
-          
-              
+              {payload?.data.map((surat) => (
+                <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                  <td className="px-6 py-4">{surat.nomor_surat}</td>
+                  <td className="px-6 py-4">{surat.tanggal_masuk}</td>
+                  <td className="px-6 py-4">{surat.perihal}</td>
+                  <td className="px-6 py-4">{surat.dari}</td>
+                  <td className="px-6 py-4">{surat.ditujukan}</td>
+                  <td className="px-6 py-4">{surat.posisi_surat}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>

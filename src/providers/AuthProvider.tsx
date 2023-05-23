@@ -21,6 +21,8 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
   const [user, setUser] = useLocalStorage("user", null);
   const navigate = useNavigate();
 
+  
+
   // call this function when you want to authenticate the user
   const login = async (data: UserEntity) => {
     setUser(data);

@@ -22,43 +22,18 @@ const initialState: SideMenuState = {
       pathname: PATHNAME.DASHBOARD,
       title: "Dashboard",
     },
-
-
     {
-      icon: "Coins",
-      
-      title: "Penggajian",
-      subMenu: [
-        {
-          icon: "ChevronRight",
-          pathname: PATHNAME.PENGGAJIAN,
-          title: "Penggajian",
-        },
-        {
-          icon: "ChevronRight",
-          pathname: PATHNAME.MASTER_POTONGAN,
-          title: "Potongan",
-        },
-        {
-          icon: "ChevronRight",
-          pathname: PATHNAME.MASTER_TUNJANGAN,
-          title: "Tunjangan",
-        },
-      ],
+      icon: "User",
+      pathname: PATHNAME.USER,
+      title: "User",
     },
     {
-      icon: "Settings",
-      pathname: PATHNAME.PENGATURAN,
-      title: "Pengaturan",
+      icon: "Mail",
+      pathname: PATHNAME.SURAT,
+      title: "Surat",
     },
   ],
 };
-// initialState.menu.sort((a, b) => {
-//   if (typeof a === "object" && typeof b === "object") {
-//     return a.title > b.title ? 1 : -1;
-//   }
-//   return 0;
-// });
 
 initialState.menu.map((menu: Menu | "divider") => {
   if (typeof menu === "object") {

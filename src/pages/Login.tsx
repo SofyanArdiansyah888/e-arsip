@@ -71,6 +71,7 @@ function Login() {
                 <div className="mt-8 intro-x">
                   <FormInput
                     type="text"
+                    className="block px-4 py-3 mt-4 intro-x login__input min-w-full xl:min-w-[350px]"
                     {...register("name")}
                     placeholder="Username..."
                   />
@@ -80,7 +81,7 @@ function Login() {
                   <FormInput
                     type="password"
                     className="block px-4 py-3 mt-4 intro-x login__input min-w-full xl:min-w-[350px]"
-                    placeholder="Your Password..."
+                    placeholder="Password..."
                     {...register("password")}
                   />
                   <div className="text-danger font-semibold text-xs mt-2">

@@ -29,6 +29,8 @@ import SlipGaji from "@/pages/Penggajian/SlipGaji/SlipGaji";
 import DetailSlipGaji from "@/pages/Penggajian/SlipGaji/Detail/DetailSlipGaji";
 import Beranda from "@/pages/Frontend/Beranda";
 import Pencarian from "@/pages/Frontend/Pencarian";
+import User from "@/pages/User/user";
+import Surat from "@/pages/Surat/surat";
 
 function Router() {
   const routes = [
@@ -50,92 +52,14 @@ function Router() {
         },
         // MASTER DATA
         {
-          path: PATHNAME.MASTER_JABATAN,
-          element: <Jabatan />,
+          path: PATHNAME.USER,
+          element: <User />,
         },
         {
-          path: PATHNAME.MASTER_IZIN,
-          element: <MasterIzin />,
+          path: PATHNAME.SURAT,
+          element: <Surat />,
         },
-        {
-          path: PATHNAME.MASTER_POTONGAN,
-          element: <MasterPotongan />,
-        },
-        {
-          path: PATHNAME.MASTER_TUNJANGAN,
-          element: <MasterTunjangan />,
-        },
-        {
-          path: PATHNAME.PENGATURAN,
-          element: <Pengaturan />,
-        },
-        {
-          path: PATHNAME.MASTER_LEVEL,
-          element: <Divisi />,
-        },
-        {
-          path: PATHNAME.MASTER_UNIT_KERJA,
-          element: <Departemen />,
-        },
-        {
-          path: PATHNAME.MASTER_SHIFT,
-          element: <Shift />,
-        },
-        {
-          path: PATHNAME.MASTER_HARI_LIBUR,
-          element: <HariLibur />,
-        },
-
-        // KARYAWAN
-        {
-          path: PATHNAME.KARYAWAN,
-          element: <Karyawan />,
-        },
-        {
-          path: PATHNAME.KARYAWAN_ABSEN,
-          element: <Absensi />,
-        },
-        {
-          path: PATHNAME.KARYAWAN_ABSEN_DETAIL,
-          element: <DetailAbsensi />,
-        },
-        {
-          path: PATHNAME.KARYAWAN_SCHEDULE,
-          element: <KaryawanSchedule />,
-        },
-
-        {
-          path: "karyawan/create",
-          element: <CreateKaryawan />,
-        },
-        {
-          path: "profil",
-          element: <DetailKaryawan />,
-        },
-        {
-          path: PATHNAME.KARYAWAN_DETAIL,
-          element: <DetailKaryawan />,
-        },
-        {
-          path: PATHNAME.KARYAWAN_CUTI,
-          element: <RiwayatCuti />,
-        },
-        {
-          path: PATHNAME.KARYAWAN_IZIN,
-          element: <RiwayatIzin />,
-        },
-        {
-          path: PATHNAME.PENGGAJIAN,
-          element: <Penggajian />,
-        },
-        {
-          path: PATHNAME.PENGGAJIAN_SLIP_GAJI,
-          element: <SlipGaji />,
-        },
-        {
-          path: PATHNAME.PENGGAJIAN_DETAIL_SLIP_GAJI,
-          element: <DetailSlipGaji />,
-        },
+        
       ],
     },
     {

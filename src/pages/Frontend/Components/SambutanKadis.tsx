@@ -6,10 +6,10 @@ export default function SambutanKadis() {
         <div className="w-1/2 h-auto mb-24 xl:mb-0">
           <img
             src={sekdaUrl}
-            className="rounded-full h-48 lg:h-72 w-48 lg:w-72 mx-auto  bg-white object-fill"
+            className="rounded-full w-48 h-48 lg:h-60  lg:w-60 mx-auto  bg-white object-fill"
           />
-          <div className="mt-8 p-3 bg-green-100 rounded-xl font-semibold">
-            Sedang Berada Di Ruang Tamu
+          <div className="mt-8 p-3 bg-red-600 rounded-xl font-semibold capitalize text-white">
+          Tugas dalam daerah
           </div>
         </div>
 

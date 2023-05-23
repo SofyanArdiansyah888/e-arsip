@@ -12,6 +12,7 @@
 */
 
 export interface UserEntity {
+  id: number | string;
   name: string;
   email: string;
   password: string;
