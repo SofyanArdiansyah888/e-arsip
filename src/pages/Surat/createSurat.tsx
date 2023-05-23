@@ -1,4 +1,3 @@
-import Dropzone from "@/base-components/Dropzone";
 import { FormInput, FormLabel, FormTextarea } from "@/base-components/Form";
 import Litepicker from "@/base-components/Litepicker";
 import { BaseModal } from "@/components/Modals/Modals";
@@ -6,10 +5,8 @@ import { usePost } from "@/hooks/useApi";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { setNotification } from "@/stores/apps/notificationSlice";
 import { useAppDispatch } from "@/stores/hooks";
-import { RootState } from "@/stores/store";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm } from "react-hook-form";
-import { useSelector } from "react-redux";
 import * as yup from "yup";
 
 interface ICreateSurat {
@@ -50,9 +47,7 @@ export default function CreateSurat(props: ICreateSurat) {
   });
 
   const dispatch = useAppDispatch();
-  const selectedKaryawan = useSelector(
-    (state: RootState) => state.selectedKaryawan.karyawan
-  );
+
 
   const { mutate, isLoading } = usePost({
     endpoint: "surats",
@@ -72,7 +67,6 @@ export default function CreateSurat(props: ICreateSurat) {
   function handleCreateSurat(data: FormData) {
     mutate({
       ...data,
-      karyawan_id: selectedKaryawan?.id,
     });
   }
 

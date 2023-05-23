@@ -1,36 +1,16 @@
-import { useRoutes } from "react-router-dom";
 import SideMenu from "@/layouts/SideMenu";
 import Dashboard from "@/pages/Dashboard";
-import Karyawan from "@/pages/Karyawan/List";
-import DetailKaryawan from "@/pages/Karyawan/List/Detail";
-import CreateKaryawan from "@/pages/Karyawan/List/Edit";
-import HariLibur from "@/pages/MasterData/HariLibur";
-import MasterIzin from "@/pages/MasterData/Izin";
-import Jabatan from "@/pages/MasterData/Jabatan";
-import Divisi from "@/pages/MasterData/Level";
-import MasterPotongan from "@/pages/Penggajian/Potongan";
-import Shift from "@/pages/MasterData/Shift";
-import MasterTunjangan from "@/pages/Penggajian/Tunjangan";
-import Departemen from "@/pages/MasterData/UnitKerja";
-import RiwayatCuti from "@/pages/Karyawan/RiwayatCuti/index";
-import RiwayatIzin from "@/pages/Karyawan/RiwayatIzin/index";
-import Absensi from "@/pages/Karyawan/Absensi";
-import DetailAbsensi from "@/pages/Karyawan/AbsensiDetail/AbsensiDetail";
-import Pengaturan from "@/pages/Pengaturan";
-import PATHNAME from "./path";
+import Error401Page from "@/pages/Error/401";
 import Error404Page from "@/pages/Error/404";
 import Error500Page from "@/pages/Error/500";
-import Error401Page from "@/pages/Error/401";
-import KaryawanSchedule from "@/pages/Karyawan/Schedule/Schedule";
-import Login from "@/pages/Login";
-import { ProtectedRoute } from "./ProtectedRoute";
-import Penggajian from "@/pages/Penggajian/Penggajian/Penggajian";
-import SlipGaji from "@/pages/Penggajian/SlipGaji/SlipGaji";
-import DetailSlipGaji from "@/pages/Penggajian/SlipGaji/Detail/DetailSlipGaji";
 import Beranda from "@/pages/Frontend/Beranda";
 import Pencarian from "@/pages/Frontend/Pencarian";
-import User from "@/pages/User/user";
+import Login from "@/pages/Login";
 import Surat from "@/pages/Surat/surat";
+import User from "@/pages/User/user";
+import { useRoutes } from "react-router-dom";
+import { ProtectedRoute } from "./ProtectedRoute";
+import PATHNAME from "./path";
 
 function Router() {
   const routes = [
