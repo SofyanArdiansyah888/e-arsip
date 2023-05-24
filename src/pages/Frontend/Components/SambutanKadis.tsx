@@ -24,7 +24,7 @@ export default function SambutanKadis() {
         <div className="w-3/4 text-left space-y-8 mx-8 lg:ml-24 self-center mb-16 ">
           <h3 className="text-4xl font-semibold">Sekda Maluku Utara</h3>
           <p className="leading-7">
-          Drs. Samsuddin Abdul Kadir, M.Si lahir di Ternate, Maluku Utara pada tanggal 12 Oktober 1970. Pada Tahun 1990 Drs. Samsuddin Abdul Kadir, M.Si menyelesaikan Pendidikan di SMA Negeri 1, kemudian menempuh Pendidikan di Sekolah Tinggi Pemerintah Dalam Negeri (STPDN) angkatan 02 Tahun 1993 dan IPP Jakarta Tahun 1999. Beliau juga melanjutkan Pendidikan S2 di UMMU pada tahun 2020. Dengan ketekunan dan motivasi untuk terus belajar penulis telah banya berkontribusi untuk daerah. 
+          Drs. Samsuddin Abdul Kadir, M.Si lahir di Ternate, Maluku Utara pada tanggal 12 Oktober 1970. Pada Tahun 1990 Drs. Samsuddin Abdul Kadir, M.Si menyelesaikan Pendidikan di SMA Negeri 1, kemudian menempuh Pendidikan di Sekolah Tinggi Pemerintah Dalam Negeri (STPDN) angkatan 02 Tahun 1993 dan IPP Jakarta Tahun 1999. Beliau juga melanjutkan Pendidikan S2 di UMMU pada tahun 2020. Dengan ketekunan dan motivasi untuk terus belajar dan berkontribusi untuk daerah. 
           </p>
           <h3 className="text-xl font-semibold">Drs. SAMSUDDIN A.KADIR</h3>
         </div>

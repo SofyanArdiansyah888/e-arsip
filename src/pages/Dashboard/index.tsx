@@ -17,7 +17,7 @@ function Main() {
           </div>
           <div className="absolute top-10 right-12 ">
            <img src={urlLogo} className='h-48' alt="Logo" />
-        </div>
+          </div>
         </div>
        
 

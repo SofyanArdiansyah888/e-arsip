@@ -11,7 +11,7 @@ export default function About() {
             Provinsi Maluku Utara
           </h3>
           <p className="leading-7">
-           Sebagai salah satu Provinsi termuda dari 33 Provinsi di Indonesia. Maluku Utara resmi terbentuk pada tanggal 4 Oktober 1999, melalui UU RI Nomor 46 Tahun 1999 dan UU RI Nomor 2003. Sebelum resmi menjadi sebuah Provinsi, Maluku Utara merupakan bagian dari Provinsi Maluku, yaitu Kabupaten Maluku Utara.
+           Sebagai salah satu Provinsi termuda dari 34 Provinsi di Indonesia. Maluku Utara resmi terbentuk pada tanggal 4 Oktober 1999, melalui UU RI Nomor 46 Tahun 1999 dan UU RI Nomor 2003. Sebelum resmi menjadi sebuah Provinsi, Maluku Utara merupakan bagian dari Provinsi Maluku, yaitu Kabupaten Maluku Utara.
           </p>
           <p className="leading-7">
            Pada awal pendiriannya, Provinsi Maluku Utara beribukota di Ternate yang berlokasi di kaki gunung Gamalama, selama 11 Tahun. Tepatnya sampai dengan 4 Agustus 2010, setelah 11 Tahun masa transisi dan persiapan infrastruktur, ibukota Provinsi Maluku Utara dipindahkan ke kota sofifi yang terletak di Pulau Halmahera yang merupakan pulau terbesarnya.
