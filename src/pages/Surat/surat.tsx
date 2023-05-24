@@ -1,25 +1,24 @@
+import Button from "@/base-components/Button";
+import { Menu } from "@/base-components/Headless";
 import Lucide from "@/base-components/Lucide";
+import Table from "@/base-components/Table";
 import {
   AddButton,
   DeleteTableButton,
   EditTableButton,
 } from "@/components/Buttons/Buttons";
 import { DeleteModal } from "@/components/Modals/Modals";
+import SkeletonTable from "@/components/Skeletons/SkeletonTable";
 import { useDelete, useGet, usePut } from "@/hooks/useApi";
 import { GetPayload } from "@/models/GenericPayload";
 import SuratEntity from "@/models/Surat.entity";
-import { useEffect, useState } from "react";
-import SkeletonTable from "@/components/Skeletons/SkeletonTable";
 import { setNotification } from "@/stores/apps/notificationSlice";
 import { useAppDispatch } from "@/stores/hooks";
+import dayjs from "dayjs";
+import { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import CreateSurat from "./createSurat";
 import EditSurat from "./editSurat";
-import dayjs from "dayjs";
-import Table from "@/base-components/Table";
-import { Menu } from "@/base-components/Headless";
-import Button from "@/base-components/Button";
-import LokasiSekda from '@/models/LokasiSekda.entity';
 export default function Surat() {
   const [createModal, setCreateModal] = useState(false);
   const [deleteModal, setDeleteModal] = useState(false);
