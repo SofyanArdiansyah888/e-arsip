@@ -94,7 +94,7 @@ export default function Surat() {
         <div className=" flex gap-2 ml-auto">
           <AddButton title="Tambah" onClick={() => setCreateModal(true)} />
           <Menu className="z-50">
-            <Menu.Button as={Button} variant="primary">
+            <Menu.Button  variant="primary" className="bg-primary text-white flex px-3 py-3 rounded-md text-xs">
               {isUpdateLoading
                 ? "Loading..."
                 : "Update Status Sekda"}
