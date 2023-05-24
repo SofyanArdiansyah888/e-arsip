@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
-import logoUrl from '../../../assets/images/logo.png'
+import logoUrl from '../../../assets/images/logo.png';
+import urlLogo  from '../../../../src/assets/images/berakhlak.png'
 interface IMenu {
   link: string;
   name:string;
@@ -12,7 +13,11 @@ export default function Navbar({menus} : {menus: IMenu[]}) {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="https://flowbite.com/" className="flex items-center">
           <img src={logoUrl} className="h-12 mr-3" alt="Logo Pemprov" />
+          
+           <img src={urlLogo} className='h-12 ml-6' alt="Logo" />
+          
         </a>
+        
         <div className="flex md:order-2">
           <Link to="/login">
             <button

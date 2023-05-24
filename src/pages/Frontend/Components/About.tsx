@@ -1,3 +1,4 @@
+import url from '@/assets/images/pemandangan.jpg'
 export default function About() {
   return (
     <section id="about" className="py-24 text-center ">
@@ -7,7 +8,7 @@ export default function About() {
       <div className="flex flex-col-reverse lg:flex-row mt-32 gap-12 px-8 lg:px-24 items-center">
         <div className="flex-1 text-left space-y-8 ">
           <h3 className="text-2xl font-semibold">
-            E Arsip Provinsi Maluku Utara
+            Provinsi Maluku Utara
           </h3>
           <p className="leading-7">
            Sebagai salah satu Provinsi termuda dari 33 Provinsi di Indonesia. Maluku Utara resmi terbentuk pada tanggal 4 Oktober 1999, melalui UU RI Nomor 46 Tahun 1999 dan UU RI Nomor 2003. Sebelum resmi menjadi sebuah Provinsi, Maluku Utara merupakan bagian dari Provinsi Maluku, yaitu Kabupaten Maluku Utara.
@@ -30,7 +31,7 @@ export default function About() {
         </div>
         <div className="flex-1">
           <img
-            src="https://file.sulselprov.go.id/upload/header/62993cd128426.png"
+            src={url}
             className="rounded-xl h-72"
           />
         </div>
