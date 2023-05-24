@@ -54,7 +54,6 @@ export default function Pencarian() {
     },
   });
   useEffect(() => {
-    console.log(search)
     setTimeout(() => {
       refetch();
     },300)

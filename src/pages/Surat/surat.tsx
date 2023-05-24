@@ -5,7 +5,7 @@ import {
   EditTableButton,
 } from "@/components/Buttons/Buttons";
 import { DeleteModal } from "@/components/Modals/Modals";
-import { useDelete, useGet } from "@/hooks/useApi";
+import { useDelete, useGet, usePut } from "@/hooks/useApi";
 import { GetPayload } from "@/models/GenericPayload";
 import SuratEntity from "@/models/Surat.entity";
 import { useEffect, useState } from "react";
@@ -17,7 +17,9 @@ import CreateSurat from "./createSurat";
 import EditSurat from "./editSurat";
 import dayjs from "dayjs";
 import Table from "@/base-components/Table";
-
+import { Menu } from "@/base-components/Headless";
+import Button from "@/base-components/Button";
+import LokasiSekda from '@/models/LokasiSekda.entity';
 export default function Surat() {
   const [createModal, setCreateModal] = useState(false);
   const [deleteModal, setDeleteModal] = useState(false);
@@ -41,6 +43,17 @@ export default function Surat() {
   });
 
   const dispatch = useAppDispatch();
+
+  const {mutate: updateStatus, isLoading: isUpdateLoading} = usePut({
+    name: 'lokasi',
+    endpoint:'lokasi/1',
+    onSuccessCallback: () => {
+      dispatch(setNotification({
+        message: "Berhasil Mengupdate Lokasi Sekda",
+        status: "success",
+      }))
+    }
+  })
 
   const { mutate } = useDelete({
     name: "surats",
@@ -71,12 +84,29 @@ export default function Surat() {
     return () => clearTimeout(delayDebounceFn);
   }, [search]);
 
+  const handleUpdate = (lokasi : "berada di kantor" | "tugas luar" | 'tugas dalam daerah') => {
+    updateStatus({ lokasi })
+  }
+
   return (
     <>
       <div className="flex flex-nowrap justify-between mt-10">
         <h2 className=" text-lg font-medium intro-y">List Surat</h2>
         <div className=" flex gap-2 ml-auto">
           <AddButton title="Tambah" onClick={() => setCreateModal(true)} />
+          <Menu className="z-50">
+            <Menu.Button as={Button} variant="primary">
+              {isUpdateLoading
+                ? "Loading..."
+                : "Update Status Sekda"}
+              <Lucide icon="ChevronDown" className="w-4 h-4 ml-2" />
+            </Menu.Button>
+            <Menu.Items className="w-48">
+              <Menu.Item onClick = {() => handleUpdate('berada di kantor')}>Berada Di Kantor</Menu.Item>
+              <Menu.Item onClick = {() => handleUpdate('tugas luar')}>Tugas Luar</Menu.Item>
+              <Menu.Item onClick = {() => handleUpdate('tugas dalam daerah')}>Tugas Dalam Daerah</Menu.Item>
+            </Menu.Items>
+          </Menu>
         </div>
       </div>
 
@@ -181,7 +211,6 @@ function SuratTable({ payload, handleEdit, handleDelete }: ISuratTable) {
   return (
     <div className="col-span-12  intro-y flex flex-col ">
       <div className="bg-white divide-y-[1px] max-h-[58vh] overflow-auto">
-       
         <div className="col-span-12  overflow-auto intro-y lg:overflow-visible">
           <Table sm>
             <Table.Thead variant="dark" className="sticky">

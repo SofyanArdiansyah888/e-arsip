@@ -1,5 +1,12 @@
+import { useGet } from "@/hooks/useApi";
 import sekdaUrl from "../../../assets/images/sekda.jpeg";
+import LokasiSekda from "@/models/LokasiSekda.entity";
+import { GetDetailPayload } from "@/models/GenericPayload";
 export default function SambutanKadis() {
+  const {data, isLoading} = useGet<GetDetailPayload<LokasiSekda>>({
+    name:'lokasi',
+    endpoint: 'lokasi'
+  })
   return (
     <section id="sambutan" className="py-16 text-center bg-zinc-50  lg:px-48">
       <div className="flex flex-col xl:flex-row  items-center">
@@ -8,9 +15,10 @@ export default function SambutanKadis() {
             src={sekdaUrl}
             className="rounded-full w-48 h-48 lg:h-60  lg:w-60 mx-auto  bg-white object-fill"
           />
-          <div className="mt-8 p-3 bg-red-600 rounded-xl font-semibold capitalize text-white">
-          Tugas dalam daerah
-          </div>
+          
+         {!isLoading && <div className={`mt-8 p-3  rounded-xl font-semibold  text-white capitalize ${data?.data.lokasi === 'berada di kantor' ? 'bg-green-600' : 'bg-red-600'}`}>
+          {data?.data.lokasi}
+          </div>}
         </div>
 
         <div className=" text-left space-y-8 mx-8 lg:ml-24 self-center mb-16 ">
