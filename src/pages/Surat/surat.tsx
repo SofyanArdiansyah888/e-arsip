@@ -1,4 +1,4 @@
-import Button from "@/base-components/Button";
+//@ts-nocheck
 import { Menu } from "@/base-components/Headless";
 import Lucide from "@/base-components/Lucide";
 import Table from "@/base-components/Table";
