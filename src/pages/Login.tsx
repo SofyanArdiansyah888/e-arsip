@@ -142,9 +142,9 @@ function LoginInfo() {
             className="w-1/3 ml-12 -mt-16 -intro-x "
             src={logoUrl}
           />
-          <div className="mt-10 text-4xl font-medium leading-tight text-white -intro-x">
-            Selamat Datang, <br />
-            Di Dashboard
+          <div className="mt-10 text-3xl font-medium leading-tight text-white -intro-x">
+          Sistem Informasi,
+          <br /> Ruang Sekda Provinsi Maluku Utara
           </div>
         </div>
       </div>

@@ -39,14 +39,15 @@ export default function Pencarian() {
       link: "/",
     },
   ];
+  const [surats, setSurats] = useState([])
 
   const {
     data: payload,
     refetch,
     isLoading,
   } = useGet<GetPayload<SuratEntity>>({
-    name: "surats",
-    endpoint: `surats`,
+    name: "pencarian",
+    endpoint: `pencarian`,
     filter: {
       limit: 100,
       jenis_surat: jenisSurat,
@@ -142,9 +143,21 @@ export default function Pencarian() {
                 <th scope="col" className="px-6 py-3">
                   Posisi Surat
                 </th>
+                <th scope="col" className="px-6 py-3">
+                  Disposisi
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Catatan
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Diteruskan Kepada
+                </th>
               </tr>
             </thead>
             <tbody>
+              {
+                payload?.data.length === 0 && <tr><td colSpan={99} className="text-center px-6 py-4 text-lg font-light">Silahkan Cari Surat....</td></tr>
+              }
               {payload?.data.map((surat) => (
                 <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                   <td className="px-6 py-4">{surat.nomor_surat}</td>
@@ -153,6 +166,9 @@ export default function Pencarian() {
                   <td className="px-6 py-4">{surat.dari}</td>
                   <td className="px-6 py-4">{surat.ditujukan}</td>
                   <td className="px-6 py-4">{surat.posisi_surat}</td>
+                  <td className="px-6 py-4">{surat.disposisi}</td>
+                  <td className="px-6 py-4">{surat.catatan}</td>
+                  <td className="px-6 py-4">{surat.diteruskan_kepada}</td>
                 </tr>
               ))}
             </tbody>

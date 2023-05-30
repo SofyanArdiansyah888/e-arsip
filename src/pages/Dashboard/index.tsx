@@ -15,8 +15,8 @@ function Main() {
           <div className="text-xl text-slate-500 mt-2">
           Ciptakan Pelayanan Prima
           </div>
-          <div className="absolute top-10 right-12 ">
-           <img src={urlLogo} className='h-48' alt="Logo" />
+          <div className="absolute top-20 right-12 ">
+           <img src={urlLogo} className='h-24' alt="Logo" />
           </div>
         </div>
        
