@@ -4,8 +4,7 @@ import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
 import SambutanKadis from "./Components/SambutanKadis";
 import Layout from "./Layouts";
-import Lucide from "@/base-components/Lucide";
-import waUrl from "../../assets/images/whatsapp.png";
+
 
 export default function Beranda() {
   useEffect(() => {
@@ -39,11 +38,7 @@ export default function Beranda() {
           <Hero />
           <SambutanKadis />
           <About />
-          <a href="https://wa.me/08114344494?text=Hallo%20sekda" target="_blank">
-            <div className="w-16 h-16 bg-green-700 sticky bottom-6 rounded-full left-[94%] flex items-center animate-bounce">
-              <img src={waUrl} />
-            </div>
-          </a>
+          
         </>
       </Layout>
     </>
