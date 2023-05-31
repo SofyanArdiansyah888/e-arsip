@@ -8,7 +8,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import clsx from "clsx";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { useLocation, useNavigate, useNavigation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 
 const schema = yup

@@ -12,7 +12,7 @@ export default function Hero() {
     >
       <div className="px-4 mx-auto  text-center lg:py-56 items-center ">
         <h1 className="mb-4 text-4xl font-extralight tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
-       <strong>Si</strong> stem Infor <strong>m</strong> asi <strong>Pel</strong> ayanan Sekretaris Daerah
+       <strong className="text-red-500 font-extrabold">Si</strong> stem Infor <strong className="text-red-500 font-extrabold">M</strong> asi <strong className="text-red-500 font-extrabold">Pel</strong> ayanan Sekretaris Daerah
         </h1>
         <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
           Checking surat online Sekretaris Daerah Provinsi Maluku Utara

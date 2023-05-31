@@ -10,15 +10,20 @@ export default function SambutanKadis() {
   return (
     <section id="sambutan" className="py-16 text-center bg-zinc-50  lg:px-48">
       <div className="flex flex-col xl:flex-row  items-center">
-        <div className=" h-auto mb-24 xl:mb-0">
+        <div className=" h-auto mb-24 xl:mb-0 relative">
+          
+          
           <img
             src={sekdaUrl}
-            className="rounded-full w-48 h-48 lg:h-60  lg:w-60 mx-auto  bg-white object-fill"
+            className=" rounded-lg h-80  w-72 mx-auto  bg-white object-fill relative z-10"
           />
           
-         {!isLoading && <div className={`mt-8 p-3  rounded-xl font-semibold  text-white capitalize ${data?.data.lokasi === 'berada di kantor' ? 'bg-green-600' : 'bg-red-600'}`}>
+         {!isLoading && <div className={`mt-8 p-3  rounded-xl font-semibold  text-white capitalize ${data?.data.lokasi === 'berada di kantor' ? 'bg-green-600' : 'bg-red-600'} z-10 relative`}>
           {data?.data.lokasi}
           </div>}
+
+          <div className="bg-green-300 h-72 w-64 rounded-md absolute bottom-16 -left-4 opacity-50  "></div>
+          
         </div>
 
         <div className="w-3/4 text-left space-y-8 mx-8 lg:ml-24 self-center mb-16 ">
