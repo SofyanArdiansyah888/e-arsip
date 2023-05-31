@@ -6,7 +6,9 @@ import { UserEntity } from "@/models/User.entity";
 import { useAuth } from "@/providers/AuthProvider";
 import { yupResolver } from "@hookform/resolvers/yup";
 import clsx from "clsx";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { useLocation, useNavigate, useNavigation } from "react-router-dom";
 import * as yup from "yup";
 
 const schema = yup
@@ -19,6 +21,7 @@ type FormData = yup.InferType<typeof schema>;
 
 function Login() {
   const auth = useAuth();
+  const navigation = useNavigate();
   const {
     register,
     formState: { errors },
@@ -41,6 +44,12 @@ function Login() {
       }
     },
   });
+
+  useEffect(() => {
+    if(auth?.user){
+      navigation('/dashboard');
+    }
+  },[])
 
   const handleLogin = (data: FormData) => {
     mutate(data);
