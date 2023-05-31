@@ -77,7 +77,7 @@ export default function Surat() {
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
       setPage(0);
-      setLimit(0);
+      setLimit(10);
       refetch();
     }, 300);
     return () => clearTimeout(delayDebounceFn);
