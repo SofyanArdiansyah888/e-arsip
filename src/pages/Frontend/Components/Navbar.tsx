@@ -44,7 +44,7 @@ export default function Navbar({menus} : {menus: IMenu[]}) {
               } `}
               aria-current="page"
             >
-              Cari Surat
+              Layanan
             </Link>
           </ul>
           <div className="flex md:order-2 ml-12">
