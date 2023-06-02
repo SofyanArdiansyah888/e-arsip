@@ -1,5 +1,5 @@
 import { useGet } from "@/hooks/useApi";
-import sekdaUrl from "../../../assets/images/sekda.jpeg";
+import sekdaUrl from "../../../assets/images/sekda.jpg";
 import LokasiSekda from "@/models/LokasiSekda.entity";
 import { GetDetailPayload } from "@/models/GenericPayload";
 export default function SambutanKadis() {
