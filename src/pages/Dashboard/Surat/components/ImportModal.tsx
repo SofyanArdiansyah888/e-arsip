@@ -28,7 +28,7 @@ export default function ImportModal(props: IImportModal) {
       <div className="grid grid-cols-12 px-8 py-4 gap-4">
         <div className="col-span-12 bg-slate-50 px-4 py-8 rounded-md text-center text-xs ">
           Silahkan upload dengan contoh format file berikut,
-          <Link to='/FORMAT_SURAT.xlsx'>
+          <Link to='https://hris2.banisadar.com/public/FORMAT_SURAT.xlsx'>
             <Button variant="outline-success" className="mt-2">
               Format Import Surat
             </Button>
