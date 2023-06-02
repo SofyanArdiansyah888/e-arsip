@@ -153,7 +153,7 @@ function LoginInfo() {
           />
           <div className="mt-10 text-3xl font-medium leading-tight text-white -intro-x">
           Sistem Informasi,
-          <br /> Ruang Sekda Provinsi Maluku Utara
+          <br /> Sekretaris Daerah Prov.Malut
           </div>
         </div>
       </div>
