@@ -22,7 +22,7 @@ export default function SambutanKadis() {
           {data?.data.lokasi}
           </div>}
 
-          <div className="bg-green-300 h-72 w-64 rounded-md absolute bottom-16 -left-4 opacity-50  "></div>
+          <div className="bg-gray-200 h-72 w-64 rounded-md absolute bottom-16 -left-4 opacity-50  "></div>
           
         </div>
 
