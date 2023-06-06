@@ -16,28 +16,15 @@ export default function Beranda() {
       body.style.padding = "16px";
     };
   }, []);
-  const menus = [
-    {
-      name: "Beranda",
-      link: "#beranda",
-    },
-    {
-      name: "Sambutan",
-      link: "#sambutan",
-    },
-    {
-      name: "Tentang Kami",
-      link: "#about",
-    },
-  ];
+
   return (
     <>
       <Layout>
         <>
-          <Navbar menus={menus} />
+          <Navbar  />
           <Hero />
-          <SambutanKadis />
-          <About />
+          {/* <SambutanKadis />
+          <About /> */}
           
         </>
       </Layout>

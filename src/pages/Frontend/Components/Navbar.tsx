@@ -1,10 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import urlLogo from "../../../../src/assets/images/berakhlak.png";
-interface IMenu {
-  link: string;
-  name: string;
-}
-export default function Navbar({ menus }: { menus: IMenu[] }) {
+
+export default function Navbar() {
   const { hash } = useLocation();
 
   return (
@@ -12,8 +9,6 @@ export default function Navbar({ menus }: { menus: IMenu[] }) {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center">
           <p className="text-2xl text-red-700 uppercase font-semibold self-end">Simpel</p>
-          {/* <img src={logoUrl} className="h-12 mr-3" alt="Logo Pemprov" /> */}
-
           <img src={urlLogo} className="h-12 ml-6" alt="Logo" />
         </a>
 
@@ -22,19 +17,33 @@ export default function Navbar({ menus }: { menus: IMenu[] }) {
           id="navbar-sticky"
         >
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            {menus.map((menu, index) => (
-              <li key={index}>
+              {/* BERANDA */}
+              <li>
                 <a
-                  href={menu.link}
+                  href="/"
                   className={`block py-2 pl-3 pr-4 rounded md:bg-transparent  md:p-0 ${
-                    menu.link === hash ? "text-green-700" : "text-slate-700"
+                    "/" === hash ? "text-green-700" : "text-slate-700"
                   } `}
                   aria-current="page"
                 >
-                  {menu.name}
+                  Beranda
                 </a>
               </li>
-            ))}
+
+              {/* PROFIL */}
+              <li>
+                <a
+                  href="/"
+                  className={`block py-2 pl-3 pr-4 rounded md:bg-transparent  md:p-0 ${
+                    "/" === hash ? "text-green-700" : "text-slate-700"
+                  } `}
+                  aria-current="page"
+                >
+                  Profil
+                </a>
+              </li>
+
+
             <Link
               to="/pencarian"
               className={`block py-2 pl-3 pr-4 rounded md:bg-transparent  md:p-0 ${

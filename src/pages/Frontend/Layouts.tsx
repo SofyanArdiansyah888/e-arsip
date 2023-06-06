@@ -1,13 +1,12 @@
 import React from "react";
-import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
 import waUrl from "../../assets/images/whatsapp.png";
+import Footer from "./Components/Footer";
 const Layout = ({children}: {children: React.ReactNode}) => {
   return (
     <div>
       
       {children}
-      <a href="https://wa.me/08114344494?text=Hallo%20sekda" target="_blank">
+      <a href="https://wa.me/08114344494?text=Hallo%20sekda" target="_blank" className="absolute right-4 bottom-4">
             <div className="w-16 h-16 bg-green-700 sticky bottom-6 rounded-full left-[94%] flex items-center animate-bounce">
               <img src={waUrl} />
             </div>

@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="beranda"
-      className={`w-full flex items-center h-[85vh] mt-[70px] bg-cover bg-center bg-no-repeat  bg-gray-600 bg-blend-multiply`}
+      className={`w-full flex items-center h-[90vh] mt-[70px] bg-cover bg-center bg-no-repeat  bg-gray-600 bg-blend-multiply`}
       style={{
         backgroundImage: `url(${sliderUrl})`,
       }}
@@ -17,15 +17,15 @@ export default function Hero() {
             <p>Provinsi Maluku Utara</p>
           </div>
         </div>
-        <h1 className="mb-4 text-4xl font-extralight tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+        <h1 className="mb-4 text-4xl font-light tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
           <strong className="text-red-500 font-extrabold">Si</strong> stem Infor{" "}
           <strong className="text-red-500 font-extrabold">M</strong> asi{" "}
           <strong className="text-red-500 font-extrabold">Pel</strong> ayanan
           Sekretaris Daerah
         </h1>
-        <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
+        {/* <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
           Checking surat online Sekretaris Daerah Provinsi Maluku Utara
-        </p>
+        </p> */}
         {/* <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
           <Link
             to="/pencarian"
