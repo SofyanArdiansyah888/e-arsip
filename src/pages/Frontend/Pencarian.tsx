@@ -21,25 +21,6 @@ export default function Pencarian() {
     body.style.padding = "0";
     body.style.background = "white";
   }, []);
-  const menus = [
-    {
-      name: "Beranda",
-      link: "/",
-    },
-    {
-      name: "Tentang Kami",
-      link: "/",
-    },
-    {
-      name: "Berita",
-      link: "/",
-    },
-    {
-      name: "Kontak",
-      link: "/",
-    },
-  ];
-  const [surats, setSurats] = useState([])
 
   const {
     data: payload,
@@ -63,7 +44,7 @@ export default function Pencarian() {
 
   return (
     <Layout>
-      <Navbar menus={menus} />
+      <Navbar />
       <div className="mt-20 pt-12 px-8 min-h-screen space-y-8">
         <h1 className="font-semibold text-2xl">Silahkan Cari Surat Anda</h1>
         <div className="mb-6">
