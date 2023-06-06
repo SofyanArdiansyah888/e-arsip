@@ -1,24 +1,22 @@
 import { Link, useLocation } from "react-router-dom";
-import logoUrl from '../../../assets/images/logo.png';
-import urlLogo  from '../../../../src/assets/images/berakhlak.png'
+import urlLogo from "../../../../src/assets/images/berakhlak.png";
 interface IMenu {
   link: string;
-  name:string;
+  name: string;
 }
-export default function Navbar({menus} : {menus: IMenu[]}) {
+export default function Navbar({ menus }: { menus: IMenu[] }) {
   const { hash } = useLocation();
-  
+
   return (
     <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" className="flex items-center">
-          <img src={logoUrl} className="h-12 mr-3" alt="Logo Pemprov" />
-          
-           <img src={urlLogo} className='h-12 ml-6' alt="Logo" />
-          
+        <a href="/" className="flex items-center">
+          <p className="text-2xl text-red-700 uppercase font-semibold self-end">Simpel</p>
+          {/* <img src={logoUrl} className="h-12 mr-3" alt="Logo Pemprov" /> */}
+
+          <img src={urlLogo} className="h-12 ml-6" alt="Logo" />
         </a>
-        
-      
+
         <div
           className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
           id="navbar-sticky"
@@ -40,7 +38,7 @@ export default function Navbar({menus} : {menus: IMenu[]}) {
             <Link
               to="/pencarian"
               className={`block py-2 pl-3 pr-4 rounded md:bg-transparent  md:p-0 ${
-                'pencarian' === hash ? "text-green-700" : "text-slate-700"
+                "pencarian" === hash ? "text-green-700" : "text-slate-700"
               } `}
               aria-current="page"
             >
@@ -48,37 +46,37 @@ export default function Navbar({menus} : {menus: IMenu[]}) {
             </Link>
           </ul>
           <div className="flex md:order-2 ml-12">
-          <Link to="/login">
+            <Link to="/login">
+              <button
+                type="button"
+                className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+              >
+                Login
+              </button>
+            </Link>
             <button
+              data-collapse-toggle="navbar-sticky"
               type="button"
-              className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+              className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-sticky"
+              aria-expanded="false"
             >
-              Login
+              <span className="sr-only">Open main menu</span>
+              <svg
+                className="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
             </button>
-          </Link>
-          <button
-            data-collapse-toggle="navbar-sticky"
-            type="button"
-            className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-sticky"
-            aria-expanded="false"
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
-        </div>
+          </div>
         </div>
       </div>
     </nav>
