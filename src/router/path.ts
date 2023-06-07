@@ -3,6 +3,7 @@
     BASE: '/',
     BERANDA: '/beranda',
     PROFIL_PEJABAT: '/profil-pejabat',
+    MALUKU_UTARA: '/maluku-utara',
     PENCARIAN: '/pencarian',
     DASHBOARD  : '/dashboard',
     USER: '/user',

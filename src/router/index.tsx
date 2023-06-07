@@ -12,6 +12,7 @@ import { useRoutes } from "react-router-dom";
 import { ProtectedRoute } from "./ProtectedRoute";
 import PATHNAME from "./path";
 import ProfilPejabat from "@/pages/Frontend/ProfilPejabat";
+import MalukuUtara from "@/pages/Frontend/MalukuUtara";
 
 function Router() {
   const routes = [
@@ -54,6 +55,10 @@ function Router() {
     {
       path: PATHNAME.PROFIL_PEJABAT,
       element: <ProfilPejabat />
+    },
+    {
+      path: PATHNAME.MALUKU_UTARA,
+      element: <MalukuUtara />
     },
     {
       path: PATHNAME.PENCARIAN,

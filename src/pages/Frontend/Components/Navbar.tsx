@@ -49,7 +49,7 @@ export default function Navbar() {
                 >
                   <ul className="space-y-1" role="none">
                     <li className="hover:bg-green-200 py-2 px-1 rounded-md">
-                      Maluku Utara
+                      <Link to="/maluku-utara">Maluku Utara</Link>
                     </li>
                     <li className="hover:bg-green-200 py-2 px-1 rounded-md">
                       <Link to="/profil-pejabat">Profil Pejabat</Link>
@@ -95,10 +95,7 @@ export default function Navbar() {
                             SOP Persuratan
                           </li>
                           <li className="hover:bg-green-200 py-2 px-1 rounded-md">
-                            <Link to="/pencarian">
-                            Traking Surat
-                            </Link>
-                            
+                            <Link to="/pencarian">Traking Surat</Link>
                           </li>
                         </ul>
                       </div>

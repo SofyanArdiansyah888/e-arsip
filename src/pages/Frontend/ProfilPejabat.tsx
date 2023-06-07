@@ -22,7 +22,7 @@ export default function ProfilPejabat() {
   return (
     <Layout>
       <Navbar />
-      <section id="sambutan" className="py-48 text-center bg-zinc-50 h-screen  lg:px-48">
+      <section id="sambutan" className="pb-48 pt-40 text-center bg-zinc-50 h-[calc(100vh-70px)]  lg:px-48">
         <div className="flex flex-col xl:flex-row  items-center">
           <div className=" h-auto mb-24 xl:mb-0 relative">
             <img
