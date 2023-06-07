@@ -9,7 +9,7 @@ export default function Hero() {
         backgroundImage: `url(${sliderUrl})`,
       }}
     >
-      <div className="px-4 mx-auto  text-center lg:py-56 items-center relative ">
+      <div className="px-4 mx-auto  text-center py-72 md:py-56 items-center relative ">
         <div className="absolute top-3 left-3 flex">
           <img src={logoUrl} className="h-16 mr-3" alt="Logo Pemprov" />
           <div className="text-red-500 text-left text-xl font-semibold">

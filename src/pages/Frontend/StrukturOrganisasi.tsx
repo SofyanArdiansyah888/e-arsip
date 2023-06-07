@@ -5,6 +5,7 @@ import { GetDetailPayload } from "@/models/GenericPayload";
 import Layout from "./Layouts";
 import Navbar from "./Components/Navbar";
 import { useEffect } from "react";
+import urlStruktur from '@/assets/images/organisasi.jpg'
 export default function StrukturOrganisasi() {
   const { data, isLoading } = useGet<GetDetailPayload<LokasiSekda>>({
     name: "lokasi",
@@ -22,10 +23,10 @@ export default function StrukturOrganisasi() {
   return (
     <Layout>
       <Navbar />
-      <section id="sambutan" className="pb-48 pt-40 text-center bg-zinc-50 h-auto  lg:px-48">
+      <section id="sambutan" className="pb-48 pt-40 text-center bg-zinc-50 h-auto min-h-screen  lg:px-48">
         <h1 className="text-3xl font-semibold ">Struktur Organisasi</h1>
         <div className="border-b-4 border-gray-200 w-[350px] mb-24 mt-2 mx-auto"></div>
-        <img src="https://biroumum.github.io/malut/gambar/struktur1.jpg">
+        <img src={urlStruktur}>
         </img>
       </section>
     </Layout>

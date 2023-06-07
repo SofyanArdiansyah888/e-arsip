@@ -24,7 +24,7 @@ export default function Pengaduan() {
       <Navbar />
       <section
         id="sambutan"
-        className="pb-48 pt-40 text-center bg-zinc-50 h-auto  lg:px-48"
+        className="pb-48 pt-40 text-center bg-zinc-50  h-auto min-h-screen  lg:px-48"
       >
         <h1 className="text-3xl font-semibold ">Pengaduan</h1>
         <div className="border-b-4 border-gray-200 w-[350px] mb-20 mt-2 mx-auto"></div>

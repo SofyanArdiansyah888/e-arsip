@@ -20,25 +20,19 @@ export default function MalukuUtara() {
   return (
     <Layout>
       <Navbar />
-      <section id="about" className="py-24 pt-12 text-center h-[calc(100vh-70px)]">
+      <section id="about" className="py-24 pt-6 text-center h-auto md:h-[calc(100vh-70px)]">
         
-        <div className="flex flex-col-reverse lg:flex-row mt-32 gap-12 px-8 lg:px-24 items-center">
+        <div className="flex flex-col-reverse lg:flex-row mt-12 md:mt-32 gap-12 px-8 lg:px-24 items-center">
           <div className="flex-1 text-left space-y-8 ">
             <h3 className="text-2xl font-semibold">Provinsi Maluku Utara</h3>
             <p className="leading-7">
-              Sebagai salah satu Provinsi termuda dari 34 Provinsi di Indonesia.
-              Maluku Utara resmi terbentuk pada tanggal 4 Oktober 1999, melalui
-              UU RI Nomor 46 Tahun 1999 dan UU RI Nomor 2003. Sebelum resmi
-              menjadi sebuah Provinsi, Maluku Utara merupakan bagian dari
-              Provinsi Maluku, yaitu Kabupaten Maluku Utara.
+            Maluku Utara (disingkat Malut) merupakan provinsi bagian Timur Indonesia yang resmi terbentuk pada 4 Oktober 1999 yang sebelumnya menjadi kabupaten dari provinsi Maluku bersama dengan Halmahera Tengah, berdasarkan UU RI Nomor 46 Tahun 1999 dan UU RI Nomor Tahun 2003.
             </p>
             <p className="leading-7">
-              Pada awal pendiriannya, Provinsi Maluku Utara beribukota di
-              Ternate yang berlokasi di kaki gunung Gamalama, selama 11 Tahun.
-              Tepatnya sampai dengan 4 Agustus 2010, setelah 11 Tahun masa
-              transisi dan persiapan infrastruktur, ibukota Provinsi Maluku
-              Utara dipindahkan ke kota sofifi yang terletak di Pulau Halmahera
-              yang merupakan pulau terbesarnya.
+            Provinsi Maluku Utara terdiri dari 1.474 pulau, jumlah pulau yang dihuni sebanyak 89 dan sisanya sebanyak 1.385 tidak berpenghuni. Jumlah penduduk Maluku Utara pada tahun 2021 mencapai 1.316.973 jiwa, dengan kepadatan penduduk sebanyak 41 jiwa/km2
+            </p>
+            <p className="leading-7">
+            Saat awal pendirian Provinsi Maluku Utara, ibu kota ditempatkan di Kota Ternate berlokasi di kaki Gunung Gamalama dalam kurun waktu kurang lebih 11 tahun, hingga pada 4 Agustus 2010 setelah adanya masa transisi dan persiapan pembangunan, Maluku Utara memindahkan ibukota ke Sofifi yang terletak di Pulau Halmahera yang merupakan pulau terbesarnya.
             </p>
             {/* <p className="leading-7">
           Geografis Maluku Utara yang terletak pada Koordinat 3º 40' LS- 3º 0' LU123º 50' - 129º 50' BT, sebenarnya merupakan gugusan kepulauan dengan rasio daratan dan perairan sebanyak 24 : 76. Memiliki gugusan pulau sebanyak 395 buah, 83% atau sekitar 331 pulaunya belum berpenghuni.
