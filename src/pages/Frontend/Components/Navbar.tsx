@@ -1,14 +1,18 @@
 import { Link, useLocation } from "react-router-dom";
 import urlLogo from "../../../../src/assets/images/berakhlak.png";
+import { useState } from "react";
 
 export default function Navbar() {
   const { hash } = useLocation();
+  const [isSubLayanan, setIsSubLayanan] = useState(false);
 
   return (
     <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center">
-          <p className="text-2xl text-red-700 uppercase font-semibold self-end">Simpel</p>
+          <p className="text-2xl text-red-700 uppercase font-semibold self-end">
+            Simpel
+          </p>
           <img src={urlLogo} className="h-12 ml-6" alt="Logo" />
         </a>
 
@@ -17,48 +21,104 @@ export default function Navbar() {
           id="navbar-sticky"
         >
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              {/* BERANDA */}
-              <li>
-                <a
-                  href="/"
-                  className={`block py-2 pl-3 pr-4 rounded md:bg-transparent  md:p-0 ${
-                    "/" === hash ? "text-green-700" : "text-slate-700"
-                  } `}
-                  aria-current="page"
-                >
-                  Beranda
-                </a>
-              </li>
+            {/* BERANDA */}
+            <li>
+              <Link
+                to="/"
+                className={`block py-2 pl-3 pr-4 rounded md:bg-transparent  md:p-0 ${
+                  "/" === hash ? "text-green-700" : "text-slate-700"
+                } `}
+                aria-current="page"
+              >
+                Beranda
+              </Link>
+            </li>
 
-              {/* PROFIL */}
-              <li>
-                <a
-                  href="/"
-                  className={`block py-2 pl-3 pr-4 rounded md:bg-transparent  md:p-0 ${
+            {/* PROFIL */}
+            <li>
+              <div className="group relative">
+                <button
+                  className={`menu-hover block py-2 pl-3 pr-4 rounded md:bg-transparent  md:p-0 ${
                     "/" === hash ? "text-green-700" : "text-slate-700"
                   } `}
-                  aria-current="page"
                 >
                   Profil
-                </a>
-              </li>
+                </button>
+                <div
+                  className={`absolute invisible group-hover:visible  z-10 top-5 w-auto min-w-[150px] text-sm bg-white border border-gray-100 rounded-lg shadow-md px-2 py-4 cursor-pointer`}
+                >
+                  <ul className="space-y-1" role="none">
+                    <li className="hover:bg-green-200 py-2 px-1 rounded-md">
+                      Maluku Utara
+                    </li>
+                    <li className="hover:bg-green-200 py-2 px-1 rounded-md">
+                      <Link to="/profil-pejabat">Profil Pejabat</Link>
+                    </li>
+                    <li className="hover:bg-green-200 py-2 px-1 rounded-md">
+                      Visi Misi
+                    </li>
+                    <li className="hover:bg-green-200 py-2 px-1 rounded-md">
+                      Struktur Organisasi
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
 
-
-            <Link
-              to="/pencarian"
-              className={`block py-2 pl-3 pr-4 rounded md:bg-transparent  md:p-0 ${
-                "pencarian" === hash ? "text-green-700" : "text-slate-700"
-              } `}
-              aria-current="page"
-            >
-              Layanan
-            </Link>
+            {/* LAYANAN */}
+            <li>
+              <div className="group relative">
+                <button
+                  className={`block py-2 pl-3 pr-4 rounded md:bg-transparent  md:p-0 ${
+                    "/layanan" === hash ? "text-green-700" : "text-slate-700"
+                  } `}
+                >
+                  Layanan
+                </button>
+                <div
+                  className={`absolute invisible group-hover:visible  z-10 top-5 w-auto min-w-[150px] text-sm bg-white border border-gray-100 rounded-lg shadow-md px-2 py-4 cursor-pointer`}
+                >
+                  <ul className="space-y-1">
+                    <li
+                      className="hover:bg-green-200 py-2 px-1 rounded-md group relative"
+                      onMouseEnter={() => setIsSubLayanan(true)}
+                      onMouseLeave={() => setIsSubLayanan(false)}
+                    >
+                      Surat
+                      <div
+                        className={`absolute min-w-[150px]  left-[132px] top-0 z-10 bg-white border border-gray-100 rounded-lg shadow-md px-2 py-4 cursor-pointer ${
+                          isSubLayanan ? "" : "hidden"
+                        }`}
+                      >
+                        <ul>
+                          <li className="hover:bg-green-200 py-2 px-1 rounded-md">
+                            SOP Persuratan
+                          </li>
+                          <li className="hover:bg-green-200 py-2 px-1 rounded-md">
+                            Traking Surat
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li className="hover:bg-green-200 py-2 px-1 rounded-md">
+                      <Link to="/profil-pejabat">Posisi Sekda</Link>
+                    </li>
+                    <li className="hover:bg-green-200 py-2 px-1 rounded-md">
+                      Pengaduan
+                    </li>
+                    <li className="hover:bg-green-200 py-2 px-1 rounded-md">
+                      Layanan Online
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
           </ul>
           <div className="flex md:order-2 ml-12">
             <Link to="/login">
               <button
                 type="button"
-                className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+                className="text-white  bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
               >
                 Login
               </button>

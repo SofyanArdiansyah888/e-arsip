@@ -11,6 +11,7 @@ import User from "@/pages/Dashboard/User/user";
 import { useRoutes } from "react-router-dom";
 import { ProtectedRoute } from "./ProtectedRoute";
 import PATHNAME from "./path";
+import ProfilPejabat from "@/pages/Frontend/ProfilPejabat";
 
 function Router() {
   const routes = [
@@ -49,6 +50,10 @@ function Router() {
     {
       path: PATHNAME.BERANDA,
       element: <Beranda />
+    },
+    {
+      path: PATHNAME.PROFIL_PEJABAT,
+      element: <ProfilPejabat />
     },
     {
       path: PATHNAME.PENCARIAN,

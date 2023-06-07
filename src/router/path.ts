@@ -2,6 +2,7 @@
  const PATHNAME  = {
     BASE: '/',
     BERANDA: '/beranda',
+    PROFIL_PEJABAT: '/profil-pejabat',
     PENCARIAN: '/pencarian',
     DASHBOARD  : '/dashboard',
     USER: '/user',
