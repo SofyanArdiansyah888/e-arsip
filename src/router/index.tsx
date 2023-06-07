@@ -14,6 +14,9 @@ import PATHNAME from "./path";
 import ProfilPejabat from "@/pages/Frontend/ProfilPejabat";
 import MalukuUtara from "@/pages/Frontend/MalukuUtara";
 import StrukturOrganisasi from "@/pages/Frontend/StrukturOrganisasi";
+import LayananOnline from "@/pages/Frontend/LayananOnline";
+import Pengaduan from "@/pages/Frontend/Pengaduan";
+import VisiMisi from "@/pages/Frontend/VisiMisi";
 
 function Router() {
   const routes = [
@@ -65,6 +68,19 @@ function Router() {
       path: PATHNAME.STRUKTUR_ORGANISASI,
       element: <StrukturOrganisasi />
     },
+    {
+      path: PATHNAME.VISI_MISI,
+      element: <VisiMisi />
+    },
+    {
+      path: PATHNAME.PENADUAN,
+      element: <Pengaduan />
+    },
+    {
+      path: PATHNAME.LAYANAN_ONLINE,
+      element: <LayananOnline />
+    },
+
     {
       path: PATHNAME.PENCARIAN,
       element: <Pencarian />

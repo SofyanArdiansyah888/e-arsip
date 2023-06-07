@@ -55,7 +55,7 @@ export default function Navbar() {
                       <Link to="/profil-pejabat">Profil Pejabat</Link>
                     </li>
                     <li className="hover:bg-green-200 py-2 px-1 rounded-md">
-                      Visi Misi
+                      <Link to="/visi-misi">Visi Misi</Link>
                     </li>
                     <li className="hover:bg-green-200 py-2 px-1 rounded-md">
                       <Link to="/struktur-organisasi">Struktur Organisasi</Link>
@@ -104,10 +104,7 @@ export default function Navbar() {
                       <Link to="/profil-pejabat">Posisi Sekda</Link>
                     </li>
                     <li className="hover:bg-green-200 py-2 px-1 rounded-md">
-                      Pengaduan
-                    </li>
-                    <li className="hover:bg-green-200 py-2 px-1 rounded-md">
-                      Layanan Online
+                      <Link to="/pengaduan"> Pengaduan</Link>
                     </li>
                   </ul>
                 </div>
