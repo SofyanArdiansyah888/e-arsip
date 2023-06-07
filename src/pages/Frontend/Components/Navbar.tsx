@@ -58,7 +58,7 @@ export default function Navbar() {
                       Visi Misi
                     </li>
                     <li className="hover:bg-green-200 py-2 px-1 rounded-md">
-                      Struktur Organisasi
+                      <Link to="/struktur-organisasi">Struktur Organisasi</Link>
                     </li>
                   </ul>
                 </div>

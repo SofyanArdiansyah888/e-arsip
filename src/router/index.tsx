@@ -13,6 +13,7 @@ import { ProtectedRoute } from "./ProtectedRoute";
 import PATHNAME from "./path";
 import ProfilPejabat from "@/pages/Frontend/ProfilPejabat";
 import MalukuUtara from "@/pages/Frontend/MalukuUtara";
+import StrukturOrganisasi from "@/pages/Frontend/StrukturOrganisasi";
 
 function Router() {
   const routes = [
@@ -59,6 +60,10 @@ function Router() {
     {
       path: PATHNAME.MALUKU_UTARA,
       element: <MalukuUtara />
+    },
+    {
+      path: PATHNAME.STRUKTUR_ORGANISASI,
+      element: <StrukturOrganisasi />
     },
     {
       path: PATHNAME.PENCARIAN,

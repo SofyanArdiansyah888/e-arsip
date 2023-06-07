@@ -4,6 +4,7 @@
     BERANDA: '/beranda',
     PROFIL_PEJABAT: '/profil-pejabat',
     MALUKU_UTARA: '/maluku-utara',
+    STRUKTUR_ORGANISASI: '/struktur-organisasi',
     PENCARIAN: '/pencarian',
     DASHBOARD  : '/dashboard',
     USER: '/user',
