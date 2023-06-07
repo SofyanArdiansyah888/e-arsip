@@ -95,7 +95,10 @@ export default function Navbar() {
                             SOP Persuratan
                           </li>
                           <li className="hover:bg-green-200 py-2 px-1 rounded-md">
+                            <Link to="/pencarian">
                             Traking Surat
+                            </Link>
+                            
                           </li>
                         </ul>
                       </div>
