@@ -1,5 +1,5 @@
 import { useGet } from "@/hooks/useApi";
-import sekdaUrl from "@/assets/images/sekda.jpg";
+import sekdaUrl from "@/assets/images/sekda.jpeg";
 import LokasiSekda from "@/models/LokasiSekda.entity";
 import { GetDetailPayload } from "@/models/GenericPayload";
 import Layout from "./Layouts";
