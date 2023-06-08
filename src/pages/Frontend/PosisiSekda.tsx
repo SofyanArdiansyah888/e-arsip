@@ -60,7 +60,7 @@ export default function PosisiSekda() {
                 <strong>Nip:</strong> 19701012 199101 1 003
               </p>
               <p>
-                <strong>Pangkat/Gol:</strong> Pembina Utama, IV/d
+                <strong>Pangkat/Gol:</strong> Pembina Utama, IV/e
               </p>
               <p>
                 <strong>Tempat/Tanggal Lahir:</strong> Ternate, 12 Oktober 1970.{" "}
