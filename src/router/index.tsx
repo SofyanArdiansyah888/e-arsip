@@ -17,6 +17,7 @@ import StrukturOrganisasi from "@/pages/Frontend/StrukturOrganisasi";
 import LayananOnline from "@/pages/Frontend/LayananOnline";
 import Pengaduan from "@/pages/Frontend/Pengaduan";
 import VisiMisi from "@/pages/Frontend/VisiMisi";
+import PosisiSekda from "@/pages/Frontend/PosisiSekda";
 
 function Router() {
   const routes = [
@@ -63,6 +64,10 @@ function Router() {
     {
       path: PATHNAME.MALUKU_UTARA,
       element: <MalukuUtara />
+    },
+    {
+      path: PATHNAME.POSISI_SEKDA,
+      element: <PosisiSekda />
     },
     {
       path: PATHNAME.STRUKTUR_ORGANISASI,

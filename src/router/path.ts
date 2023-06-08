@@ -4,6 +4,7 @@
     BERANDA: '/beranda',
     PROFIL_PEJABAT: '/profil-pejabat',
     MALUKU_UTARA: '/maluku-utara',
+    POSISI_SEKDA: '/posisi-sekda',
     STRUKTUR_ORGANISASI: '/struktur-organisasi',
     VISI_MISI: '/visi-misi',
     PENADUAN: '/pengaduan',

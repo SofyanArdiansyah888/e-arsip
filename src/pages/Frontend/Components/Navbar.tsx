@@ -105,7 +105,7 @@ export default function Navbar() {
                         </div>
                       </li>
                       <li className="hover:bg-green-200 py-2 px-1 rounded-md">
-                        <Link to="/profil-pejabat">Posisi Sekda</Link>
+                        <Link to="/posisi-sekda">Posisi Sekda</Link>
                       </li>
                       <li className="hover:bg-green-200 py-2 px-1 rounded-md">
                         <Link to="/pengaduan"> Pengaduan</Link>
