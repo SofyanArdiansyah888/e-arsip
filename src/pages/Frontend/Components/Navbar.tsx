@@ -14,7 +14,7 @@ export default function Navbar() {
           <p className="text-2xl text-red-700 uppercase font-semibold self-end">
             Simpel
           </p>
-          <img src={urlLogo} className="h-12 ml-6 hidden md:flex" alt="Logo" />
+          <img src={urlLogo} className="h-12 ml-2 md:ml-6 w-32 md:w-auto  md:flex" alt="Logo" />
         </a>
 
         <div className="flex items-center">
