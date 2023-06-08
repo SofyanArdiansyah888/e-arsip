@@ -20,7 +20,7 @@ export default function MalukuUtara() {
   return (
     <Layout>
       <Navbar />
-      <section id="about" className="py-24 pt-6 text-center h-auto md:h-[calc(100vh-70px)]">
+      <section id="about" className="py-24 pt-12 md:pt-6 text-center h-auto md:h-[calc(100vh-70px)]">
         
         <div className="flex flex-col-reverse lg:flex-row mt-12 md:mt-32 gap-12 px-8 lg:px-24 items-center">
           <div className="flex-1 text-left space-y-8 ">
