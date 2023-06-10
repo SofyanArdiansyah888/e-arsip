@@ -26,6 +26,7 @@ const schema = yup
     diteruskan_kepada: yup.string().notRequired(),
     catatan: yup.string().notRequired(),
     jenis_surat: yup.string().required(),
+    nomor_agenda: yup.string().required()
   })
   .required();
 type FormData = yup.InferType<typeof schema>;
@@ -147,6 +148,16 @@ export default function CreateSurat(props: ICreateSurat) {
           <FormInput type="text" {...register("nomor_surat")} />
           <div className="text-danger font-semibold text-xs mt-2">
             {errors?.nomor_surat?.message}
+          </div>
+        </div>
+
+        <div className="col-span-6">
+          <FormLabel htmlFor="nomor_agenda">
+            Nomor Agenda <small className="text-danger">*</small>
+          </FormLabel>
+          <FormInput type="text" {...register("nomor_agenda")} />
+          <div className="text-danger font-semibold text-xs mt-2">
+            {errors?.nomor_agenda?.message}
           </div>
         </div>
 

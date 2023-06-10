@@ -31,7 +31,8 @@ const schema = yup
     disposisi: yup.string().notRequired(),
     diteruskan_kepada: yup.string().notRequired(),
     catatan: yup.string().notRequired(),
-    jenis_surat: yup.string().required()
+    jenis_surat: yup.string().required(),
+    nomor_agenda: yup.string().required()
   })
   .required();
 type FormData = yup.InferType<typeof schema>;
@@ -64,6 +65,7 @@ export default function EditSurat(props: IEditSurat) {
       setValue("ditujukan", selectedItem?.ditujukan);
       setValue("perihal", selectedItem?.perihal);
       setValue("jenis_surat", selectedItem?.jenis_surat);
+      setValue("nomor_agenda", selectedItem?.nomor_agenda);
     }
   }, [props.isModal]);
 
@@ -142,6 +144,16 @@ export default function EditSurat(props: IEditSurat) {
           <FormInput type="text" {...register("nomor_surat")} />
           <div className="text-danger font-semibold text-xs mt-2">
             {errors?.nomor_surat?.message}
+          </div>
+        </div>
+
+        <div className="col-span-6">
+          <FormLabel htmlFor="nomor_agenda">
+            Nomor Agenda <small className="text-danger">*</small>
+          </FormLabel>
+          <FormInput type="text" {...register("nomor_agenda")} />
+          <div className="text-danger font-semibold text-xs mt-2">
+            {errors?.nomor_agenda?.message}
           </div>
         </div>
 

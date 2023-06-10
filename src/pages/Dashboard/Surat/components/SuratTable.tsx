@@ -32,6 +32,7 @@ export default function SuratTable({
             <Table.Thead variant="dark" className="sticky">
               <Table.Tr>
                 <Table.Th>Nomor Surat</Table.Th>
+                <Table.Th>Nomor Agenda</Table.Th>
                 <Table.Th>Tanggal Masuk</Table.Th>
                 <Table.Th>Perihal</Table.Th>
                 <Table.Th>Posisi Surat</Table.Th>
@@ -52,6 +53,9 @@ export default function SuratTable({
                 <Table.Tr key={index} className="intro-x bg-white">
                   <Table.Td className="capitalize">
                     {divisi.nomor_surat}
+                  </Table.Td>
+                  <Table.Td className="capitalize">
+                    {divisi.nomor_agenda}
                   </Table.Td>
                   <Table.Td className="capitalize">
                     {dayjs(divisi.tanggal_masuk).format("DD MMMM YYYY")}
