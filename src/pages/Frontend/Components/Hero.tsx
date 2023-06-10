@@ -13,14 +13,14 @@ export default function Hero() {
         <div className="absolute top-3 left-3 flex">
           <img src={logoUrl} className="h-16 mr-3" alt="Logo Pemprov" />
           <div className="text-red-500 text-left text-xl font-semibold">
+            <p>Pemerintah Provinsi Maluku Utara</p>
             <p>Sekretariat Daerah</p>
-            <p>Provinsi Maluku Utara</p>
           </div>
         </div>
         <h1 className="mb-4 text-4xl font-light tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
-          <strong className="text-red-500 font-extrabold">Si</strong> stem Infor{" "}
-          <strong className="text-red-500 font-extrabold">M</strong> asi{" "}
-          <strong className="text-red-500 font-extrabold">Pel</strong> ayanan
+          <strong className="text-red-500 font-extrabold">Si</strong>stem Infor
+          <strong className="text-red-500 font-extrabold">M</strong>asi{" "}
+          <strong className="text-red-500 font-extrabold">Pel</strong>ayanan
           Sekretaris Daerah
         </h1>
         {/* <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
