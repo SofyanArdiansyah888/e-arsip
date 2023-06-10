@@ -10,11 +10,11 @@ import SuratEntity from "@/models/Surat.entity";
 export default function Pencarian() {
   const [showFilter, setShowFilter] = useState(false);
   const [jenisSurat, setJenisSurat] = useState("surat umum");
-  const [cariFilter, setCariFilter] = useState<
-    "Nomor Surat" | "Asal Surat" | "Perihal"
-  >("Nomor Surat");
+  const [cariFilter, setCariFilter] = useState<"Nomor Surat" | "Nomor Agenda">(
+    "Nomor Surat"
+  );
 
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const body = document.getElementsByTagName("body")[0];
@@ -32,14 +32,14 @@ export default function Pencarian() {
     filter: {
       limit: 100,
       jenis_surat: jenisSurat,
-      search
+      search,
+      [cariFilter.replace(" ", "_").toLowerCase()]: search,
     },
   });
   useEffect(() => {
     setTimeout(() => {
       refetch();
-    },300)
-    
+    }, 300);
   }, [search]);
 
   return (
@@ -84,19 +84,11 @@ export default function Pencarian() {
               </Menu.Item>
               <Menu.Item
                 onClick={() => {
-                  setCariFilter("Asal Surat");
+                  setCariFilter("Nomor Agenda");
                   setShowFilter(false);
                 }}
               >
-                Asal Surat
-              </Menu.Item>
-              <Menu.Item
-                onClick={() => {
-                  setCariFilter("Perihal");
-                  setShowFilter(false);
-                }}
-              >
-                Perihal
+                Nomor Agenda
               </Menu.Item>
             </Menu>
           )}
@@ -108,6 +100,9 @@ export default function Pencarian() {
               <tr>
                 <th scope="col" className="px-6 py-3">
                   Nomor Surat
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Nomor Agenda
                 </th>
                 <th scope="col" className="px-6 py-3">
                   Tanggal Masuk
@@ -136,12 +131,20 @@ export default function Pencarian() {
               </tr>
             </thead>
             <tbody>
-              {
-                payload?.data.length === 0 && <tr><td colSpan={99} className="text-center px-6 py-4 text-lg font-light">Silahkan Cari Surat....</td></tr>
-              }
+              {payload?.data.length === 0 && (
+                <tr>
+                  <td
+                    colSpan={99}
+                    className="text-center px-6 py-4 text-lg font-light"
+                  >
+                    Silahkan Cari Surat....
+                  </td>
+                </tr>
+              )}
               {payload?.data.map((surat) => (
                 <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                   <td className="px-6 py-4">{surat.nomor_surat}</td>
+                  <td className="px-6 py-4">{surat.nomor_agenda}</td>
                   <td className="px-6 py-4">{surat.tanggal_masuk}</td>
                   <td className="px-6 py-4">{surat.perihal}</td>
                   <td className="px-6 py-4">{surat.dari}</td>

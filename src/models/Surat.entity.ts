@@ -10,4 +10,5 @@ export default interface SuratEntity{
     diteruskan_kepada: string;
     catatan: string
     jenis_surat: string;
+    nomor_agenda: string;
 }
