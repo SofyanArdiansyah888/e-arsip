@@ -104,7 +104,7 @@ export default function EditSurat(props: IEditSurat) {
         isLoading,
       }}
     >
-      <div className="grid grid-cols-12 px-8 py-4 gap-4">
+      <div className="grid grid-cols-12 px-8 py-4 gap-4 max-h-[450px] overflow-y-auto">
       <div className="col-span-6">
           <FormLabel htmlFor="tanggal_masuk">Tanggal Masuk</FormLabel>
           <Controller
