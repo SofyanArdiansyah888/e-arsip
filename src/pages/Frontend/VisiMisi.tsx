@@ -61,8 +61,8 @@ export default function VisiMisi() {
         </div>
 
         <div className="px-4 py-6 text-center bg-white shadow-sm  mt-4">
-          <h1 className="text-2xl font-semibold">
-            TUPOKSI SEKRETARIAT DAERAH BERDASARKAN PERGUB 7 TAHUN 2021 SETDA
+          <h1 className="text-2xl font-semibold capitalize">
+          Tugas dan Fungsi Sekretariat Daerah Berdasarkan Peraturan Gubernur No. 7 Tahun 2021 Sekretariat Daerah  Provinsi Maluku Utara
           </h1>
           <p className="font-semibold mt-8 ">Tugas Pokok</p>
           <p className="mt-2">Pasal 4</p>
