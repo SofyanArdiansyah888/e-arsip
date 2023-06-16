@@ -3,6 +3,8 @@
     BASE: '/',
     BERANDA: '/beranda',
     PROFIL_PEJABAT: '/profil-pejabat',
+    PROFIL_GUBERNUR: '/profil-gubernur',
+    PROFIL_WAKIL_GUBERNUR: '/profil-wakil-gubernur',
     MALUKU_UTARA: '/maluku-utara',
     POSISI_SEKDA: '/posisi-sekda',
     STRUKTUR_ORGANISASI: '/struktur-organisasi',

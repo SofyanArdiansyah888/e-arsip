@@ -18,6 +18,8 @@ import LayananOnline from "@/pages/Frontend/LayananOnline";
 import Pengaduan from "@/pages/Frontend/Pengaduan";
 import VisiMisi from "@/pages/Frontend/VisiMisi";
 import PosisiSekda from "@/pages/Frontend/PosisiSekda";
+import ProfilGubernur from "@/pages/Frontend/ProfilGubernur";
+import ProfilWakilGubernur from "@/pages/Frontend/ProfilWakilGubernur";
 
 function Router() {
   const routes = [
@@ -60,6 +62,14 @@ function Router() {
     {
       path: PATHNAME.PROFIL_PEJABAT,
       element: <ProfilPejabat />
+    },
+    {
+      path: PATHNAME.PROFIL_GUBERNUR,
+      element: <ProfilGubernur />
+    },
+    {
+      path: PATHNAME.PROFIL_WAKIL_GUBERNUR,
+      element: <ProfilWakilGubernur />
     },
     {
       path: PATHNAME.MALUKU_UTARA,
