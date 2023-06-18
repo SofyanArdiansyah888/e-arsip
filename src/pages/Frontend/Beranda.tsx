@@ -1,33 +1,28 @@
-import { useEffect } from "react";
-import About from "./Components/About";
+import {useEffect} from "react";
 import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
-import SambutanKadis from "./Components/SambutanKadis";
 import Layout from "./Layouts";
 
 
 export default function Beranda() {
-  useEffect(() => {
-    const body = document.getElementsByTagName("body")[0];
-    body.style.padding = "0";
-    body.style.background = "white";
-    return () => {
-      body.style.background = "#0f172a";
-      body.style.padding = "16px";
-    };
-  }, []);
+    useEffect(() => {
+        const body = document.getElementsByTagName("body")[0];
+        body.style.padding = "0";
+        body.style.background = "white";
+        return () => {
+            body.style.background = "#0f172a";
+            body.style.padding = "16px";
+        };
+    }, []);
 
-  return (
-    <>
-      <Layout>
+    return (
         <>
-          <Navbar  />
-          <Hero />
-          {/* <SambutanKadis />
-          <About /> */}
-          
+            <Layout>
+                <>
+                    <Navbar/>
+                    <Hero/>
+                </>
+            </Layout>
         </>
-      </Layout>
-    </>
-  );
+    );
 }
