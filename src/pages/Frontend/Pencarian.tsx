@@ -17,9 +17,17 @@ export default function Pencarian() {
     const [showFilter, setShowFilter] = useState(false);
     const [jenisSurat, setJenisSurat] = useState("surat umum");
     const [cariFilter, setCariFilter] = useState<"Nomor Surat" | "Nomor Agenda">("Nomor Surat");
-
+    const [time, setTime] = useState(0);
     const [search, setSearch] = useState("");
 
+    useEffect(() => {
+        console.log(time, 'this is time')
+        setInterval(() => {
+            if (time === 7) { setTime(0) }else {
+                setTime(inTime => inTime + 1);
+            }
+        }, 3000)
+    }, [])
     useEffect(() => {
         const body = document.getElementsByTagName("body")[0];
         body.style.padding = "0";
@@ -154,7 +162,9 @@ export default function Pencarian() {
             </div>
 
             <div className="absolute w-full">
-                <img className="mx-auto h-[450px] mt-24" src={orangMalukuUrl1} alt="Gambar Orang"/>
+                <img className="mx-auto h-[450px] mt-24"
+                     src={time === 0 ? orangMalukuUrl1 : time === 1 ? orangMalukuUrl2 : time === 2 ? orangMalukuUrl3 : time === 3 ? orangMalukuUrl4 : time === 4 ? orangMalukuUrl5 : time === 5 ? orangMalukuUrl6 : orangMalukuUrl1}
+                     alt="Gambar Orang"/>
             </div>
         </div>
         <div className="opacity-5">

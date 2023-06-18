@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Navbar from "./Components/Navbar";
 import Layout from "./Layouts";
 import indonesiaUrl from '../../assets/images/indonesia.jpg'
+import sekdaUrl from "@/assets/images/sekda.jpg";
 export default function ProfilGubernur() {
   
   useEffect(() => {
@@ -25,10 +26,10 @@ export default function ProfilGubernur() {
           <h3 className="text-3xl font-semibold capitalize text-center mb-4">
             GUBERNUR MALUKU UTARA
           </h3>
-          <div className=" h-auto mb-24 xl:mb-0">
+          <div className=" h-auto mb-24 xl:mb-0 relative">
             <img
-              src={gubernurUrl}
-              className=" rounded-lg h-80  w-72 mx-auto  bg-white object-fill relative z-10"
+                src={gubernurUrl}
+                className=" rounded-lg h-80  w-72 mx-auto  bg-white object-fill relative z-10"
             />
 
             <div className="bg-gray-200 h-72 w-64 rounded-md absolute bottom-16 -left-4 opacity-50  "></div>
@@ -39,6 +40,7 @@ export default function ProfilGubernur() {
               <p>
                 <strong>Tempat/Tanggal Lahir:</strong> Bibinoi, Halmahera Selatan, Maluku Utara 21  Desember 1951
               </p>
+              <br/>
               <p>
                 <strong>Pengalaman Jabatan / Pekerjaan:</strong>
               </p>
