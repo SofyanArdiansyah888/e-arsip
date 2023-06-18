@@ -21,13 +21,14 @@ export default function Pencarian() {
     const [search, setSearch] = useState("");
 
     useEffect(() => {
-        console.log(time, 'this is time')
-        setInterval(() => {
-            if (time === 7) { setTime(0) }else {
+        console.log(time,'mytime')
+        setTimeout(() => {
+            if (time === 6) { setTime(0) }else {
                 setTime(inTime => inTime + 1);
             }
-        }, 3000)
-    }, [])
+        }, 1500)
+    }, [time])
+
     useEffect(() => {
         const body = document.getElementsByTagName("body")[0];
         body.style.padding = "0";
@@ -162,7 +163,7 @@ export default function Pencarian() {
             </div>
 
             <div className="absolute w-full">
-                <img className="mx-auto h-[450px] mt-24"
+                <img className="mx-auto h-[550px] mt-20"
                      src={time === 0 ? orangMalukuUrl1 : time === 1 ? orangMalukuUrl2 : time === 2 ? orangMalukuUrl3 : time === 3 ? orangMalukuUrl4 : time === 4 ? orangMalukuUrl5 : time === 5 ? orangMalukuUrl6 : orangMalukuUrl1}
                      alt="Gambar Orang"/>
             </div>
