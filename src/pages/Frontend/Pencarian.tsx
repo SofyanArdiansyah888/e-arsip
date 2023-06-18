@@ -21,7 +21,6 @@ export default function Pencarian() {
     const [search, setSearch] = useState("");
 
     useEffect(() => {
-        console.log(time,'mytime')
         setTimeout(() => {
             if (time === 6) { setTime(0) }else {
                 setTime(inTime => inTime + 1);
