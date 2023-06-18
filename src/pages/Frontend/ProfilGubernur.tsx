@@ -2,6 +2,7 @@ import gubernurUrl from "@/assets/images/gubernur.jpg";
 import { useEffect } from "react";
 import Navbar from "./Components/Navbar";
 import Layout from "./Layouts";
+import indonesiaUrl from '../../assets/images/indonesia.jpg'
 export default function ProfilGubernur() {
   
   useEffect(() => {
@@ -20,11 +21,11 @@ export default function ProfilGubernur() {
         id="sambutan"
         className="pb-48 pt-40 text-center bg-zinc-50   min-h-[calc(100vh-70px)]  lg:px-48"
       >
-        <div className="flex flex-col gap-12  items-center space-y-8">
+        <div className="flex flex-col gap-12  items-center space-y-8 relative">
           <h3 className="text-3xl font-semibold capitalize text-center mb-4">
             GUBERNUR MALUKU UTARA
           </h3>
-          <div className=" h-auto mb-24 xl:mb-0 relative">
+          <div className=" h-auto mb-24 xl:mb-0">
             <img
               src={gubernurUrl}
               className=" rounded-lg h-80  w-72 mx-auto  bg-white object-fill relative z-10"
@@ -35,8 +36,6 @@ export default function ProfilGubernur() {
 
           <div className="w-3/4 text-left space-y-8 mx-8 lg:ml-24 self-center mb-16 ">
             <div className="space-y-3">
-
-
               <p>
                 <strong>Tempat/Tanggal Lahir:</strong> Bibinoi, Halmahera Selatan, Maluku Utara 21  Desember 1951
               </p>
@@ -54,8 +53,6 @@ export default function ProfilGubernur() {
               </ul>
 
             </div>
-
-            {/* <h3 className="text-xl font-semibold">Drs.Samsuddin A.Kadir, M.Si</h3> */}
           </div>
         </div>
       </section>
