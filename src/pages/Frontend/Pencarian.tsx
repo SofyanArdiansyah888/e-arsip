@@ -12,6 +12,7 @@ import orangMalukuUrl3 from "../../assets/images/orang_maluku3.png";
 import orangMalukuUrl4 from "../../assets/images/orang_maluku4.png";
 import orangMalukuUrl5 from "../../assets/images/orang_maluku5.png";
 import orangMalukuUrl6 from "../../assets/images/orang_maluku6.png";
+import orangMaulkuUrl7 from "../../assets/images/orang_maluku7.png";
 
 export default function Pencarian() {
     const [showFilter, setShowFilter] = useState(false);
@@ -22,10 +23,10 @@ export default function Pencarian() {
 
     useEffect(() => {
         setTimeout(() => {
-            if (time === 6) { setTime(0) }else {
+            if (time === 7) { setTime(0) }else {
                 setTime(inTime => inTime + 1);
             }
-        }, 1500)
+        }, 2000)
     }, [time])
 
     useEffect(() => {
@@ -162,8 +163,8 @@ export default function Pencarian() {
             </div>
 
             <div className="absolute w-full">
-                <img className="mx-auto h-[550px] mt-20"
-                     src={time === 0 ? orangMalukuUrl1 : time === 1 ? orangMalukuUrl2 : time === 2 ? orangMalukuUrl3 : time === 3 ? orangMalukuUrl4 : time === 4 ? orangMalukuUrl5 : time === 5 ? orangMalukuUrl6 : orangMalukuUrl1}
+                <img className="mx-auto h-[550px] mt-12"
+                     src={time === 0 ? orangMalukuUrl1 : time === 1 ? orangMalukuUrl2 : time === 2 ? orangMalukuUrl3 : time === 3 ? orangMalukuUrl4 : time === 4 ? orangMalukuUrl5 : time === 5 ? orangMalukuUrl6 : time === 6 ? orangMaulkuUrl7 : orangMalukuUrl1}
                      alt="Gambar Orang"/>
             </div>
         </div>
