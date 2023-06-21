@@ -43,9 +43,10 @@ export default function Pencarian() {
         },
     });
     useEffect(() => {
-        setTimeout(() => {
+        const delayDebounceFn = setTimeout(() => {
             refetch();
         }, 300);
+        return () => clearTimeout(delayDebounceFn);
     }, [search]);
 
     return (<Layout>
@@ -72,7 +73,13 @@ export default function Pencarian() {
                     placeholder={cariFilter}
                     required
                     value={search}
-                    onChange={(e) => setSearch(e.target.value)}
+                    onChange={(e) => setSearch(e.target.value) }
+                    onKeyDown={e => {
+                        if(e.key === 'Enter'){
+                            refetch()
+                        }
+
+                    }}
                 />
                 <Lucide
                     icon="Filter"
