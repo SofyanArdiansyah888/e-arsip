@@ -5,6 +5,7 @@ import { GetDetailPayload } from "@/models/GenericPayload";
 import Layout from "./Layouts";
 import Navbar from "./Components/Navbar";
 import { useEffect } from "react";
+import dayjs from "dayjs";
 export default function PosisiSekda() {
   const { data, isLoading } = useGet<GetDetailPayload<LokasiSekda>>({
     name: "lokasi",
@@ -41,7 +42,8 @@ export default function PosisiSekda() {
                     : "bg-red-600"
                 } z-10 relative`}
               >
-                {data?.data.lokasi}
+                {data?.data.lokasi} <br/>
+                <span>{dayjs(data?.data.updated_at).format('D MMMM YYYY') }</span>
               </div>
             )}
 
