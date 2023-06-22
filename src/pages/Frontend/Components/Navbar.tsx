@@ -133,6 +133,9 @@ export default function Navbar() {
                                         <li className="hover:bg-green-200 py-2 px-1 rounded-md">
                                             <Link to="/pengaduan"> Pengaduan</Link>
                                         </li>
+                                        <li className="hover:bg-green-200 py-2 px-1 rounded-md">
+                                            <a href={"https://biroumum.github.io/malut/"} target={"_blank"} >Biro Umum</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>

@@ -23,7 +23,9 @@ export default function Pencarian() {
 
     useEffect(() => {
         setTimeout(() => {
-            if (time === 7) { setTime(0) }else {
+            if (time === 7) {
+                setTime(0)
+            } else {
                 setTime(inTime => inTime + 1);
             }
         }, 2000)
@@ -64,6 +66,7 @@ export default function Pencarian() {
                     <option value="bantuan dana">Bantuan Dana</option>
                     <option value="surat umum">Surat Umum</option>
                 </select>
+                <small className={"text-xs text-red-600 font-semibold ml-2 mt-1"}>Silahkan Pilih Jenis Surat Anda</small>
             </div>
 
             <div className="mb-6 relative">
@@ -73,9 +76,9 @@ export default function Pencarian() {
                     placeholder={cariFilter}
                     required
                     value={search}
-                    onChange={(e) => setSearch(e.target.value) }
+                    onChange={(e) => setSearch(e.target.value)}
                     onKeyDown={e => {
-                        if(e.key === 'Enter'){
+                        if (e.key === 'Enter') {
                             refetch()
                         }
 
@@ -105,6 +108,7 @@ export default function Pencarian() {
                     </Menu.Item>
                 </Menu>)}
             </div>
+            <small className={"text-xs text-red-600 font-semibold ml-2 mt-1"}>Silahkan Ketik nomor surat atau nomor agenda anda</small>
 
             <div className="relative  overflow-x-auto shadow-md sm:rounded-lg">
                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
