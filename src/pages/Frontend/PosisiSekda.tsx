@@ -35,6 +35,7 @@ export default function PosisiSekda() {
             />
 
             {!isLoading && (
+                <>
               <div
                 className={`mt-8 p-3  rounded-xl font-semibold  text-white capitalize ${
                   data?.data.lokasi === "berada di kantor"
@@ -43,8 +44,9 @@ export default function PosisiSekda() {
                 } z-10 relative`}
               >
                 {data?.data.lokasi} <br/>
-                <span>{dayjs(data?.data.updated_at).format('D MMMM YYYY') }</span>
               </div>
+              <div className={"mt-4 font-semibold"}>Update : {dayjs(data?.data.updated_at).format('D MMMM YYYY, hh:mm') } WIT</div>
+                </>
             )}
 
             <div className="bg-gray-200 h-72 w-64 rounded-md absolute bottom-16 -left-4 opacity-50  "></div>
