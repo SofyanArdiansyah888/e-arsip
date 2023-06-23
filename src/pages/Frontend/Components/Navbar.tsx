@@ -115,7 +115,7 @@ export default function Navbar() {
                                         >
                                             Surat
                                             <div
-                                                className={`absolute min-w-[150px]  right-[132px] top-0 z-10 bg-white border border-gray-100 rounded-lg shadow-md px-2 py-4 cursor-pointer ${isSubLayanan ? "" : "hidden"}`}
+                                                className={`absolute min-w-[150px] left-[132px] md:right-[132px] top-0 z-10 bg-white border border-gray-100 rounded-lg shadow-md px-2 py-4 cursor-pointer ${isSubLayanan ? "" : "hidden"}`}
                                             >
                                                 <ul>
                                                     <li className="hover:bg-green-200 py-2 px-1 rounded-md">
