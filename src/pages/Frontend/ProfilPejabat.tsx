@@ -5,6 +5,7 @@ import { GetDetailPayload } from "@/models/GenericPayload";
 import Layout from "./Layouts";
 import Navbar from "./Components/Navbar";
 import { useEffect } from "react";
+import {ItemSekda} from "@/pages/Frontend/PosisiSekda";
 export default function ProfilPejabat() {
   const { data, isLoading } = useGet<GetDetailPayload<LokasiSekda>>({
     name: "lokasi",
@@ -41,21 +42,12 @@ export default function ProfilPejabat() {
 
           <div className="w-3/4 text-left space-y-8 mx-8 lg:ml-24 self-center mb-16 ">
             <div className="space-y-3">
-              <p>
-                <strong>Nama:</strong> Drs. Samsuddin Abdul Kadir, M.Si{" "}
-              </p>
-              <p>
-                <strong>Nip:</strong> 19701012 199101 1 003
-              </p>
-              <p>
-                <strong>Pangkat/Gol:</strong> Pembina Utama, IV/e
-              </p>
-              <p>
-                <strong>Tempat/Tanggal Lahir:</strong> Ternate, 12 Oktober 1970.{" "}
-              </p>
-              <p>
-                <strong>Pendidikan:</strong>
-              </p>
+              <ItemSekda title={"Nama"} description={"Drs. Samsuddin Abdul Kadir, M.Si"} />
+              <ItemSekda title={"Nip"} description={"19701012 199101 1 003"} />
+              <ItemSekda title={"Pangkat/Gol"} description={"Pembina Utama, IV/e"} />
+              <ItemSekda title={"Tempat/Tanggal Lahir:"} description={"Ternate, 12 Oktober 1970."} />
+              <ItemSekda title={"Pendidikan"} description={""} />
+
               <ul className="list-disc ml-12 space-y-2">
                 <li>S3 di UMMU Pada tahun 2022</li>
                 <li>S2 di UMMU Pada tahun 2020</li>
@@ -65,9 +57,7 @@ export default function ProfilPejabat() {
                   Tahun 1993
                 </li>
               </ul>
-              <p>
-                <strong>Riwayat Pekerjaan:</strong>
-              </p>
+              <ItemSekda title={"Riwayat Pekerjaan"} description={""} />
               <ul className="list-disc ml-12 space-y-2">
                 <li>
                   Tahun 2020 Sekretaris Daerah Provinsi Maluku Utara – Sekarang.

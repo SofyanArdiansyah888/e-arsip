@@ -2,6 +2,7 @@ import wagubUrl from "@/assets/images/wagub.jpg";
 import {useEffect} from "react";
 import Navbar from "./Components/Navbar";
 import Layout from "./Layouts";
+import {ItemSekda} from "@/pages/Frontend/PosisiSekda";
 
 export default function ProfilWakilGubernur() {
 
@@ -35,15 +36,9 @@ export default function ProfilWakilGubernur() {
 
                 <div className="w-3/4 text-left space-y-8 mx-8 lg:ml-24 self-center mb-16 ">
                     <div className="space-y-3">
-
-                        <p>
-                            <strong>Tempat/Tanggal Lahir:</strong>Weda, Halmahera Tengah, Maluku Utara, 25 Mei 1958.
-                        </p>
-                        <br/>
-
-                        <p>
-                            <strong>Riwayat Pekerjaan:</strong>
-                        </p>
+                        <ItemSekda title={"Nama"} description={"Ir. H. M. Al Yasin Ali"} />
+                        <ItemSekda title={"Tempat/Tanggal Lahir"} description={"Weda, Halmahera Tengah, Maluku Utara, 25 Mei 1958."} />
+                        <ItemSekda title={"Riwayat Pekerjaan"} description={""} />
                         <ul className="list-disc ml-12 space-y-2">
                             <li>
                                 Bekerja di PT Hijrah Nusatama (1986)

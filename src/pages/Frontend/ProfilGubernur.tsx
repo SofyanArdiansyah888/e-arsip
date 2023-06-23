@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar";
 import Layout from "./Layouts";
 import indonesiaUrl from '../../assets/images/indonesia.jpg'
 import sekdaUrl from "@/assets/images/sekda.jpg";
+import {ItemSekda} from "@/pages/Frontend/PosisiSekda";
 export default function ProfilGubernur() {
   
   useEffect(() => {
@@ -37,13 +38,11 @@ export default function ProfilGubernur() {
 
           <div className="w-3/4 text-left space-y-8 mx-8 lg:ml-24 self-center mb-16 ">
             <div className="space-y-3">
-              <p>
-                <strong>Tempat/Tanggal Lahir:</strong> Bibinoi, Halmahera Selatan, Maluku Utara 21  Desember 1951
-              </p>
-              <br/>
-              <p>
-                <strong>Pengalaman Jabatan / Pekerjaan:</strong>
-              </p>
+
+              <ItemSekda title={"Nama"} description={"K.H. Abdul Ghani Kasuba, Lc. "} />
+              <ItemSekda title={"Tempat/Tanggal Lahir"} description={"Bibinoi, Halmahera Selatan, Maluku Utara 21  Desember 1951"} />
+              <ItemSekda title={"Riwayat Pekerjaan"} description={""} />
+
               <ul className="list-disc ml-12 space-y-2">
                 <li>1976 s.d. 1977: Sekretaris Persatuan Pelajar Mahasiswa Medinasi</li>
                 <li>1983 s.d. 1990: Kepala Inspeksi Al Khairat Maluku Utara - Irian Jaya</li>
