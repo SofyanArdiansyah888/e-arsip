@@ -1,8 +1,6 @@
 import {useEffect, useState} from "react";
 import Layout from "./Layouts";
 import Navbar from "./Components/Navbar";
-import Lucide from "@/base-components/Lucide";
-import {Menu} from "@/base-components/Headless";
 import {useGet} from "@/hooks/useApi";
 import {GetPayload} from "@/models/GenericPayload";
 import SuratEntity from "@/models/Surat.entity";
@@ -17,7 +15,7 @@ import orangMaulkuUrl7 from "../../assets/images/orang_maluku7.png";
 export default function Pencarian() {
     const [showFilter, setShowFilter] = useState(false);
     const [jenisSurat, setJenisSurat] = useState("surat umum");
-    const [cariFilter, setCariFilter] = useState<"Nomor Surat" | "Nomor Agenda">("Nomor Surat");
+    const [cariFilter, setCariFilter] = useState<string>("Nomor Surat");
     const [time, setTime] = useState(0);
     const [search, setSearch] = useState("");
 
@@ -66,49 +64,65 @@ export default function Pencarian() {
                     <option value="bantuan dana">Bantuan Dana</option>
                     <option value="surat umum">Surat Umum</option>
                 </select>
-                <small className={"text-xs text-red-600 font-semibold ml-2 mt-1"}>Silahkan Pilih Jenis Surat Anda</small>
+                <small className={"text-xs text-red-600 font-semibold ml-2 mt-1"}>Silahkan Pilih Jenis Surat
+                    Anda</small>
             </div>
 
-            <div className="mb-6 relative">
-                <input
-                    type="text"
-                    className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                    placeholder={cariFilter}
-                    required
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                    onKeyDown={e => {
-                        if (e.key === 'Enter') {
-                            refetch()
-                        }
+            <div className={"grid grid-cols-2 gap-4"}>
+                <div className="relative">
+                    <input
+                        type="text"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                        placeholder={cariFilter}
+                        required
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        onKeyDown={e => {
+                            if (e.key === 'Enter') {
+                                refetch()
+                            }
 
-                    }}
-                />
-                <Lucide
-                    icon="Filter"
-                    className="absolute top-3 right-3 w-5 h-5 cursor-pointer"
-                    onClick={() => setShowFilter((filter) => !filter)}
-                />
-                {showFilter && (<Menu className="absolute right-0 top-12 z-30 bg-white shadow-md px-4 rounded-lg py-4 ">
-                    <Menu.Item
-                        onClick={() => {
-                            setCariFilter("Nomor Surat");
-                            setShowFilter(false);
                         }}
+                    />
+
+                    {/*<Lucide*/}
+                    {/*    icon="Filter"*/}
+                    {/*    className="absolute top-3 right-3 w-5 h-5 cursor-pointer"*/}
+                    {/*    onClick={() => setShowFilter((filter) => !filter)}*/}
+                    {/*/>*/}
+                    {/*{showFilter && (<Menu className="absolute right-0 top-12 z-30 bg-white shadow-md px-4 rounded-lg py-4 ">*/}
+                    {/*    <Menu.Item*/}
+                    {/*        onClick={() => {*/}
+                    {/*            setCariFilter("Nomor Surat");*/}
+                    {/*            setShowFilter(false);*/}
+                    {/*        }}*/}
+                    {/*    >*/}
+                    {/*        Nomor Surat*/}
+                    {/*    </Menu.Item>*/}
+                    {/*    <Menu.Item*/}
+                    {/*        onClick={() => {*/}
+                    {/*            setCariFilter("Nomor Agenda");*/}
+                    {/*            setShowFilter(false);*/}
+                    {/*        }}*/}
+                    {/*    >*/}
+                    {/*        Nomor Agenda*/}
+                    {/*    </Menu.Item>*/}
+                    {/*</Menu>)}*/}
+                </div>
+                <div className="relative">
+                    <select
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        value={cariFilter}
+                        onChange={(e) => setCariFilter(e.target.value)}
                     >
-                        Nomor Surat
-                    </Menu.Item>
-                    <Menu.Item
-                        onClick={() => {
-                            setCariFilter("Nomor Agenda");
-                            setShowFilter(false);
-                        }}
-                    >
-                        Nomor Agenda
-                    </Menu.Item>
-                </Menu>)}
+                        <option value="Nomor Surat">Nomor Surat</option>
+                        <option value="Nomor Agenda">Nomor Agenda</option>
+                    </select>
+                </div>
             </div>
-            <small className={"text-xs text-red-600 font-semibold ml-2 mt-1"}>Silahkan Ketik nomor surat atau nomor agenda anda</small>
+
+            <small className={"text-xs text-red-600 font-semibold ml-2 mt-1 mb-6"}>Silahkan Ketik nomor surat atau nomor
+                agenda anda</small>
 
             <div className="relative  overflow-x-auto shadow-md sm:rounded-lg">
                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
