@@ -75,8 +75,8 @@ export default function PosisiSekda() {
 }
 
 export const ItemSekda = ({title, description}: { title: string, description: string }) => <div
-    className="flex flex-row gap-8 items-center">
-    <div className={"w-[170px] flex justify-between font-semibold"}>
+    className="flex flex-col  md:flex-row md:gap-8 ">
+    <div className={"w-[170px] flex md:justify-between font-semibold"}>
         {title}
         <div>:</div>
     </div>
