@@ -62,7 +62,7 @@ export default function Navbar() {
                                         >
                                             Profil Pejabat
                                             <div
-                                                className={`absolute min-w-[150px]  right-[132px] top-0 z-10 bg-white border border-gray-100 rounded-lg shadow-md px-2 py-4 cursor-pointer ${isProfil ? "" : "hidden"}`}
+                                                className={`absolute min-w-[150px] left-[132px] top-0 z-10 bg-white border border-gray-100 rounded-lg shadow-md px-2 py-4 cursor-pointer ${isProfil ? "" : "hidden"}`}
                                             >
                                                 <ul>
                                                     <li className="hover:bg-green-200  rounded-md">
