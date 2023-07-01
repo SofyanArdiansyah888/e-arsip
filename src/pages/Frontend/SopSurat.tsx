@@ -20,7 +20,7 @@ export default function SopSurat() {
             id="sambutan"
             className="pb-48 pt-40 text-center bg-zinc-50 h-auto  lg:px-48"
         >
-            <h1 className="text-3xl font-semibold ">SOP Persuratan</h1>
+            <h1 className="text-3xl font-semibold uppercase  ">SOP Persuratan</h1>
             <div className="border-b-4 border-gray-200 w-[350px] mb-24 mt-2 mx-auto"></div>
 
             <div className="px-4 py-6 text-center bg-white shadow-sm  mt-4">
