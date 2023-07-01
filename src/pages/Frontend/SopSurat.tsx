@@ -1,7 +1,7 @@
 import Layout from "./Layouts";
 import Navbar from "./Components/Navbar";
 import {useEffect} from "react";
-import urlPersuratan from '@/assets/images/sop.png';
+import urlPersuratan from '@/assets/images/sop.jpg';
 
 export default function SopSurat() {
 
@@ -47,7 +47,7 @@ export default function SopSurat() {
                     </ol>
                 </div>
 
-                <img src={urlPersuratan} alt={"Gambar SOP Persuratan"} className={"mt-4 rounded-xl w-full"}/>
+                <img src={urlPersuratan} alt={"Gambar SOP Persuratan"} className={"mt-4 rounded-xl max-w-2xl mx-auto"}/>
             </div>
         </section>
     </Layout>);

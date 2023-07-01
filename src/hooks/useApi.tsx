@@ -15,6 +15,60 @@ interface IGet<T> {
   filter?: object;
 }
 
+export function useCustomGet<T>({
+                            name,
+                            endpoint,
+                            onSuccessCallback,
+                            onErrorCallback,
+                            page,
+                            limit,
+                            search,
+                            filter,
+                          }: IGet<T>) {
+  const navigate = useNavigate();
+  const [user] = useLocalStorage("user");
+
+  function getData(page: number | undefined,
+                   limit: number | undefined,
+                   search: string | undefined,
+                   filter: object | undefined) {
+    let params = new URLSearchParams();
+    if (page) {
+      params.append("page", page.toString());
+    }
+    if (limit) {
+      params.append("limit", limit.toString());
+    }
+    if (search) {
+      params.append("search", search);
+    }
+
+    if (filter) {
+      Object.entries(filter).map((item) => {
+        if (item[1] !== undefined) params.append(item[0], item[1]);
+      });
+    }
+    return apiRequest({
+      token: user?.token,
+      method: "GET",
+      endpoint: `${endpoint}?${params}`,
+      responseType: 'json'
+    });
+  }
+  return useQuery<T>([name, page,limit,search,filter], () => getData(page,limit,search,filter), {
+    onSuccess: (data) => {
+      if (onSuccessCallback) onSuccessCallback!(data);
+    },
+    onError: (error: any) => {
+      if (error?.response?.status === 500) {
+        navigate("/500");
+      } else if (error?.response?.status === 401) navigate("/401");
+    },
+    // keepPreviousData: true,
+    // enabled:Boolean(filter)
+  });
+}
+
 export function useGet<T>({
   name,
   endpoint,

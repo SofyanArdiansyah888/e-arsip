@@ -5,7 +5,7 @@ import Lucide from "@/base-components/Lucide";
 import {AddButton} from "@/components/Buttons/Buttons";
 import {DeleteModal} from "@/components/Modals/Modals";
 import SkeletonTable from "@/components/Skeletons/SkeletonTable";
-import {useDelete, useGet, usePut} from "@/hooks/useApi";
+import {useCustomGet, useDelete, useGet, usePut} from "@/hooks/useApi";
 import {GetPayload} from "@/models/GenericPayload";
 import SuratEntity from "@/models/Surat.entity";
 import {setNotification} from "@/stores/apps/notificationSlice";
@@ -17,9 +17,15 @@ import SuratTable from "./components/SuratTable";
 import CreateSurat from "./createSurat";
 import EditSurat from "./editSurat";
 import ImportModal from "./components/ImportModal";
+import FilterSurat from "@/pages/Dashboard/Surat/filterSurat";
+import {useSelector} from "react-redux";
+import {RootState} from "@/stores/store";
+import {setFilterSurat} from "@/stores/apps/filterSuratSlice";
+import {useQueryClient} from "react-query";
 
 export default function Surat() {
     const [createModal, setCreateModal] = useState(false);
+    const [filterModal, setFilterModal] = useState(false)
     const [isImportModal, setIsImportModal] = useState(false);
     const [deleteModal, setDeleteModal] = useState(false);
     const [editModal, setEditModal] = useState(false);
@@ -28,17 +34,25 @@ export default function Surat() {
     const [page, setPage] = useState<number>(0);
     const [limit, setLimit] = useState(10);
     const [search, setSearch] = useState<string>("");
+    const filterSurat = useSelector((state: RootState) => state.filterSurat);
+
 
     const {
         data: payload,
         refetch,
         isLoading,
-    } = useGet<GetPayload<SuratEntity>>({
+    } = useCustomGet<GetPayload<SuratEntity>>({
         name: "surats",
         endpoint: `surats`,
         page: page + 1,
         limit,
         search,
+        filter: {
+            posisi: filterSurat.filter.posisi,
+            disposisi: filterSurat.filter.disposisi,
+            nomor_agenda: filterSurat.filter.nomor_agenda,
+            tanggal_masuk: filterSurat.filter.tanggal_masuk,
+        }
     });
 
     const dispatch = useAppDispatch();
@@ -137,7 +151,19 @@ export default function Surat() {
             </div>
 
             <div className="grid grid-cols-12 gap-6 mt-5">
-                <div className="flex flex-wrap justify-end  col-span-12 mt-2 sm:flex-nowrap">
+                <div className="flex flex-wrap justify-between gap-2 col-span-12 mt-2 sm:flex-nowrap">
+                    <Button variant={"primary"} onClick={() => setFilterModal(true)}>
+                        <Lucide icon={"Filter"} className={"mr-2"}/> Filter
+                    </Button>
+                    <Button variant={"primary"} onClick={() => dispatch(setFilterSurat({
+                        filter: {
+                            posisi_surat: undefined,
+                            nomor_agenda: undefined,
+                            disposisi: undefined,
+                            tanggal_masuk: undefined,
+                        }
+                    }))}><Lucide
+                        icon={"XCircle"} className={"mr-2"}/> Clear Filter</Button>
                     <div className="relative w-full mt-3 ml-auto sm:w-auto sm:mt-0">
                         <Lucide
                             icon="Search"
@@ -218,6 +244,7 @@ export default function Surat() {
                 isModal={isImportModal}
                 handleCancel={() => setIsImportModal(false)}
             />
+            <FilterSurat isModal={filterModal} handleCancel={() => setFilterModal(false)}/>
         </>
     );
 }
