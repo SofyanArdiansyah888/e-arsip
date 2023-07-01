@@ -41,11 +41,11 @@ export default function VisiMisi() {
               Membangun Sumber Daya Manusia yang sehat, cerdas dan berbudaya
             </li>
             <li>
-              Mengakserasi pembangunan infrastruktur, konektivitas dan
+              Mengakselerasi pembangunan infrastruktur, konektivitas dan
               pengembangan wilayah
             </li>
             <li>
-              Membangun tatanan kehidupan masyarakat yang agamais, aman, damai
+              Membangun tatanan kehidupan masyarakat yang agamis, aman, damai
               dan harmonis;
             </li>
             <li>
