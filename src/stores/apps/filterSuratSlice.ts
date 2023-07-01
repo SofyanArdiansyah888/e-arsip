@@ -6,12 +6,17 @@ export interface IFilterSurat {
         nomor_agenda: undefined | string,
         disposisi: undefined | string,
         posisi_surat: undefined | string,
+        posisi: undefined | string,
     }
 }
 
 const initialState: IFilterSurat = {
     filter: {
-        tanggal_masuk: undefined , nomor_agenda: undefined, disposisi: undefined, posisi_surat: undefined
+        tanggal_masuk: undefined,
+        nomor_agenda: undefined,
+        disposisi: undefined,
+        posisi_surat: undefined,
+        posisi: undefined
     }
 };
 

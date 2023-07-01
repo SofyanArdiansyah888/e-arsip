@@ -52,6 +52,7 @@ export default function Surat() {
             disposisi: filterSurat.filter.disposisi,
             nomor_agenda: filterSurat.filter.nomor_agenda,
             tanggal_masuk: filterSurat.filter.tanggal_masuk,
+            posisi_surat: filterSurat.filter.posisi_surat,
         }
     });
 
