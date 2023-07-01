@@ -5,7 +5,6 @@ export interface IFilterSurat {
         tanggal_masuk: undefined | string,
         nomor_agenda: undefined | string,
         disposisi: undefined | string,
-        posisi_surat: undefined | string,
         posisi: undefined | string,
     }
 }
@@ -15,7 +14,6 @@ const initialState: IFilterSurat = {
         tanggal_masuk: undefined,
         nomor_agenda: undefined,
         disposisi: undefined,
-        posisi_surat: undefined,
         posisi: undefined
     }
 };

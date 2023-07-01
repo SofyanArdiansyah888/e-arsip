@@ -48,11 +48,10 @@ export default function Surat() {
         limit,
         search,
         filter: {
-            posisi: filterSurat.filter.posisi,
             disposisi: filterSurat.filter.disposisi,
             nomor_agenda: filterSurat.filter.nomor_agenda,
             tanggal_masuk: filterSurat.filter.tanggal_masuk,
-            posisi_surat: filterSurat.filter.posisi_surat,
+            posisi: filterSurat.filter.posisi,
         }
     });
 
@@ -158,7 +157,7 @@ export default function Surat() {
                     </Button>
                     <Button variant={"primary"} onClick={() => dispatch(setFilterSurat({
                         filter: {
-                            posisi_surat: undefined,
+                            posisi: undefined,
                             nomor_agenda: undefined,
                             disposisi: undefined,
                             tanggal_masuk: undefined,

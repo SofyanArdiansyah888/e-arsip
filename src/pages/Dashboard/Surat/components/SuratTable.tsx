@@ -36,6 +36,8 @@ export default function SuratTable({
                 <Table.Th>Tanggal Masuk</Table.Th>
                 <Table.Th>Perihal</Table.Th>
                 <Table.Th>Posisi Surat</Table.Th>
+                <Table.Th>Disposisi</Table.Th>
+
                 <Table.Th>Ditujukan</Table.Th>
                 <Table.Th>Dari</Table.Th>
                 <Table.Th className="text-center border-b-0 whitespace-nowrap">
@@ -62,6 +64,7 @@ export default function SuratTable({
                   </Table.Td>
                   <Table.Td>{divisi.perihal}</Table.Td>
                   <Table.Td>{divisi.posisi_surat}</Table.Td>
+                  <Table.Td>{divisi.disposisi}</Table.Td>
                   <Table.Td>{divisi.ditujukan}</Table.Td>
                   <Table.Td>{divisi.dari}</Table.Td>
 
