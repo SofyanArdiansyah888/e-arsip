@@ -20,6 +20,7 @@ import VisiMisi from "@/pages/Frontend/VisiMisi";
 import PosisiSekda from "@/pages/Frontend/PosisiSekda";
 import ProfilGubernur from "@/pages/Frontend/ProfilGubernur";
 import ProfilWakilGubernur from "@/pages/Frontend/ProfilWakilGubernur";
+import SopSurat from "@/pages/Frontend/SopSurat";
 
 function Router() {
   const routes = [
@@ -94,6 +95,10 @@ function Router() {
     {
       path: PATHNAME.LAYANAN_ONLINE,
       element: <LayananOnline />
+    },
+    {
+      path: PATHNAME.SOP_SURAT,
+      element: <SopSurat />
     },
 
     {

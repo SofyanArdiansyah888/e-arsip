@@ -1,6 +1,7 @@
 
  const PATHNAME  = {
     BASE: '/',
+    SOP_SURAT: '/sop-surat',
     BERANDA: '/beranda',
     PROFIL_PEJABAT: '/profil-pejabat',
     PROFIL_GUBERNUR: '/profil-gubernur',
