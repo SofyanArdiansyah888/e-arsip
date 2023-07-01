@@ -61,7 +61,7 @@ export default function Pencarian() {
                     onChange={(e) => setJenisSurat(e.target.value)}
                 >
                     <option value="surat mutasi">Surat Mutasi</option>
-                    <option value="bantuan dana">Bantuan Dana</option>
+                    <option value="bantuan dana">Proposal Dana</option>
                     <option value="surat umum">Surat Umum</option>
                 </select>
                 <small className={"text-xs text-red-600 font-semibold ml-2 mt-1"}>Silahkan Pilih Jenis Surat
