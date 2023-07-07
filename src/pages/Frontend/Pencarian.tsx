@@ -68,7 +68,7 @@ export default function Pencarian() {
                     Anda</small>
             </div>
 
-            <div className={"grid grid-cols-2 gap-4"}>
+            <div className={"grid grid-cols-1 lg:grid-cols-2 gap-4"}>
                 <div className="relative">
                     <input
                         type="text"
@@ -165,8 +165,8 @@ export default function Pencarian() {
                 </table>
             </div>
 
-            <div className="absolute w-full">
-                <img className="mx-auto h-[550px] mt-12"
+            <div className="lg:absolute max-w-xs lg:max-w-full lg:w-full">
+                <img className="mx-auto h-auto lg:h-[550px] mt-12"
                      src={time === 0 ? orangMalukuUrl1 : time === 1 ? orangMalukuUrl2 : time === 2 ? orangMalukuUrl3 : time === 3 ? orangMalukuUrl4 : time === 4 ? orangMalukuUrl5 : time === 5 ? orangMalukuUrl6 : time === 6 ? orangMaulkuUrl7 : orangMalukuUrl1}
                      alt="Gambar Orang"/>
             </div>
