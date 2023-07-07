@@ -47,7 +47,7 @@ export default function SopSurat() {
                     </ol>
                 </div>
 
-                <img src={urlPersuratan} alt={"Gambar SOP Persuratan"} className={"mt-4 rounded-xl max-w-4xl mx-auto"}/>
+                <img src={urlPersuratan} alt={"Gambar SOP Persuratan"} className={"mt-4 rounded-xl max-w-xs lg:max-w-4xl mx-auto"}/>
             </div>
         </section>
     </Layout>);
