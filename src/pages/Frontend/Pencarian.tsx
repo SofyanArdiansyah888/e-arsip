@@ -84,30 +84,8 @@ export default function Pencarian() {
 
                         }}
                     />
-
-                    {/*<Lucide*/}
-                    {/*    icon="Filter"*/}
-                    {/*    className="absolute top-3 right-3 w-5 h-5 cursor-pointer"*/}
-                    {/*    onClick={() => setShowFilter((filter) => !filter)}*/}
-                    {/*/>*/}
-                    {/*{showFilter && (<Menu className="absolute right-0 top-12 z-30 bg-white shadow-md px-4 rounded-lg py-4 ">*/}
-                    {/*    <Menu.Item*/}
-                    {/*        onClick={() => {*/}
-                    {/*            setCariFilter("Nomor Surat");*/}
-                    {/*            setShowFilter(false);*/}
-                    {/*        }}*/}
-                    {/*    >*/}
-                    {/*        Nomor Surat*/}
-                    {/*    </Menu.Item>*/}
-                    {/*    <Menu.Item*/}
-                    {/*        onClick={() => {*/}
-                    {/*            setCariFilter("Nomor Agenda");*/}
-                    {/*            setShowFilter(false);*/}
-                    {/*        }}*/}
-                    {/*    >*/}
-                    {/*        Nomor Agenda*/}
-                    {/*    </Menu.Item>*/}
-                    {/*</Menu>)}*/}
+                    <small className={"text-xs text-red-600 font-semibold ml-2 mt-1 mb-6"}>Silahkan Ketik nomor surat atau nomor
+                        agenda anda</small>
                 </div>
                 <div className="relative">
                     <select
@@ -118,11 +96,11 @@ export default function Pencarian() {
                         <option value="Nomor Surat">Nomor Surat</option>
                         <option value="Nomor Agenda">Nomor Agenda</option>
                     </select>
+                    <small className={"text-xs text-red-600 font-semibold ml-2 mt-1 mb-6"}>Silahkan Pilih Kata Kunci Pencarian Surat</small>
                 </div>
             </div>
 
-            <small className={"text-xs text-red-600 font-semibold ml-2 mt-1 mb-6"}>Silahkan Ketik nomor surat atau nomor
-                agenda anda</small>
+
 
             <div className="relative  overflow-x-auto shadow-md sm:rounded-lg">
                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
