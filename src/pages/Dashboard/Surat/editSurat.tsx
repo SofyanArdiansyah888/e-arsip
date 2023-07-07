@@ -221,7 +221,7 @@ export default function EditSurat(props: IEditSurat) {
           </FormLabel>
           <select {...register("jenis_surat")} className="border border-gray-200 text-gray-900 text-sm rounded-lg block w-full p-2 shadow-sm">
             <option value="surat mutasi">Surat Mutasi</option>
-            <option value="bantuan dana">Proposal Dana</option>
+            <option value="proposal dana">Proposal Dana</option>
             <option value="surat umum">Surat Umum</option>
           </select>
           <div className="text-danger font-semibold text-xs mt-2">
